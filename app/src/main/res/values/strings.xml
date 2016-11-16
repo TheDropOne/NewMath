@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Все формулы. Математика</string>
+    <string name="error_message">Что-то не так, перезапустите приложение</string>
+
+    <string name="help_author">Помочь автору</string>
+
+    <string name="advices">Хитрости и советы</string>
+
+    <string name="answersEgeCT">Ответы ЕГЭ и ЦТ</string>
+
+    <string name="typicalTasks">Типовые задачи</string>
+    <string name="typicalTasksSolutions">Решение типовых задач</string>
+
+    <string name="perimetr">Периметр</string>
+
+    <string name="areaPlaneFigures">Площадь плоских фигур</string>
+
+    <string name="areaOfSurface">Площадь поверхности</string>
+
+    <string name="volume">Объем тел</string>
+
+    <string name="triangle">Треугольник</string>
+
+    <string name="radiusInscribedCircle">Радиус вписанной окружности</string>
+
+    <string name="radiusCircumscribedCircle">Радиус описанной окружности</string>
+
+    <string name="trigonometry">Тригонометрия</string>
+
+    <string name="abridgedMultiplication">Формулы сокращенного умножения</string>
+
+    <string name="algebra">Алгебра</string>
+
+    <string name="integrals">Производные и интегралы</string>
+
+    <string name="usefulResources">Полезные ресурсы и книги</string>
+
+
+</resources>
