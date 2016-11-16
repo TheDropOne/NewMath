@@ -13,22 +13,22 @@ public class Constants {
     public static ArrayList<MainActivityTemplate> chapters = new ArrayList<>();
 
     public static void initializeChapters() {
-        MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.prev_atomickernelphysics);
+        MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.signingcontract);
+        MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.premiumbadge);
         MainActivityTemplate answersEgeCT = new MainActivityTemplate(R.string.answersEgeCT, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate typicalTasks = new MainActivityTemplate(R.string.typicalTasks, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate perimetr = new MainActivityTemplate(R.string.perimetr, R.drawable.prev_atomickernelphysics);
+        MainActivityTemplate typicalTasks = new MainActivityTemplate(R.string.typicalTasks, R.drawable.brackets);
+        MainActivityTemplate perimetr = new MainActivityTemplate(R.string.perimetr, R.drawable.pencil);
         MainActivityTemplate areaPlaneFigures = new MainActivityTemplate(R.string.areaPlaneFigures, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate areaOfSurface = new MainActivityTemplate(R.string.areaOfSurface, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate volume = new MainActivityTemplate(R.string.volume, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate triangle = new MainActivityTemplate(R.string.triangle, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate radiusInscribedCircle = new MainActivityTemplate(R.string.radiusInscribedCircle, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate radiusCircumscribedCircle = new MainActivityTemplate(R.string.radiusCircumscribedCircle, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate trigonometry = new MainActivityTemplate(R.string.trigonometry, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate abridgedMultiplication = new MainActivityTemplate(R.string.abridgedMultiplication, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate algebra = new MainActivityTemplate(R.string.algebra, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate integrals = new MainActivityTemplate(R.string.integrals, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate usefulResources = new MainActivityTemplate(R.string.usefulResources, R.drawable.prev_atomickernelphysics);
+        MainActivityTemplate areaOfSurface = new MainActivityTemplate(R.string.areaOfSurface, R.drawable.cube);
+        MainActivityTemplate volume = new MainActivityTemplate(R.string.volume, R.drawable.cone);
+        MainActivityTemplate triangle = new MainActivityTemplate(R.string.triangle, R.drawable.pyramid);
+        MainActivityTemplate radiusInscribedCircle = new MainActivityTemplate(R.string.radiusInscribedCircle, R.drawable.panel);
+        MainActivityTemplate radiusCircumscribedCircle = new MainActivityTemplate(R.string.radiusCircumscribedCircle, R.drawable.panel);
+        MainActivityTemplate trigonometry = new MainActivityTemplate(R.string.trigonometry, R.drawable.protractor);
+        MainActivityTemplate abridgedMultiplication = new MainActivityTemplate(R.string.abridgedMultiplication, R.drawable.equation);
+        MainActivityTemplate algebra = new MainActivityTemplate(R.string.algebra, R.drawable.compass);
+        MainActivityTemplate integrals = new MainActivityTemplate(R.string.integrals, R.drawable.function);
+        MainActivityTemplate usefulResources = new MainActivityTemplate(R.string.usefulResources, R.drawable.notebook);
 
         chapters.add(helpAuthor);
         chapters.add(advices);
