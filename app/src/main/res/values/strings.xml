@@ -27,9 +27,8 @@
 
     <string name="trigonometry">Тригонометрия</string>
 
-    <string name="abridgedMultiplication">Формулы сокращенного умножения</string>
-
     <string name="algebra">Алгебра</string>
+    <string name="abridgedMultiplication">Формулы сокращенного умножения</string>
 
     <string name="integrals">Производные и интегралы</string>
 

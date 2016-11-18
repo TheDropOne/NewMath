@@ -41,26 +41,27 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         name.setText(template.getName());
         image.setImageResource(template.getLocation());
 
-        /*holder.setOnClickListener(new View.OnClickListener() {
+        holder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String chapter = template.getName();
+                int chapter = template.getName();
 
                 switch (chapter){
 
-                    case "Кинематика" : MainActivity.underChapters = Kinematics.getList();                  break;
-                    case "Динамика" : MainActivity.underChapters = Dynamics.getList();                      break;
-                    case "Законы сохранения" : MainActivity.underChapters = ConservationLaws.getList();     break;
-                    case "Электростатика" : MainActivity.underChapters = Electrostatics.getList();          break;
-                    case "Постоянный ток" : MainActivity.underChapters = DirectCurrent.getList();           break;
-                    case "Магнитное поле" : MainActivity.underChapters = MagneticField.getList();           break;
-                    case "Колебания и волны" : MainActivity.underChapters = OscillationLaws.getList();      break;
-                    case "Оптика" : MainActivity.underChapters = Optics.getList();                          break;
-                    case "Теория относительности" : MainActivity.underChapters = Relativity.getList();      break;
-                    case "Квантовая физика" : MainActivity.underChapters = QuantumPhysics.getList();        break;
-                    case "Молекулярная физика" : MainActivity.underChapters = MolecularPhysics.getList();   break;
-                    case "Термодинамика" : MainActivity.underChapters = Thermodynamics.getList();           break;
-                    case "Физика атомного ядра": MainActivity.underChapters = AtomicKernelPhysics.getList();break;
+                    case R.string.help_author : MainActivity.underChapters = Kinematics.getList();                  break;
+                    case R.string.advices : MainActivity.underChapters = Dynamics.getList();                      break;
+                    case R.string.answersEgeCT : MainActivity.underChapters = ConservationLaws.getList();     break;
+                    case R.string.typicalTasks : MainActivity.underChapters = Electrostatics.getList();          break;
+                    case R.string.perimetr : MainActivity.underChapters = DirectCurrent.getList();           break;
+                    case R.string.areaPlaneFigures : MainActivity.underChapters = MagneticField.getList();           break;
+                    case R.string.areaOfSurface: MainActivity.underChapters = OscillationLaws.getList();      break;
+                    case R.string.volume : MainActivity.underChapters = Optics.getList();                          break;
+                    case R.string.triangle : MainActivity.underChapters = Relativity.getList();      break;
+                    case R.string.radiusInscribedCircle : MainActivity.underChapters = QuantumPhysics.getList();        break;
+                    case R.string.radiusCircumscribedCircle : MainActivity.underChapters = MolecularPhysics.getList();   break;
+                    case R.string.algebra : MainActivity.underChapters = Thermodynamics.getList();           break;
+                    case R.string.integrals: MainActivity.underChapters = AtomicKernelPhysics.getList();break;
+                    case R.string.usefulResources: MainActivity.underChapters = AtomicKernelPhysics.getList();break;
 
                     default: MainActivity.underChapters = Kinematics.getList();
 
@@ -74,7 +75,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
                 MainActivity.context.startActivity(intent);
 
             }
-        });*/
+        });
     }
 
     @Override

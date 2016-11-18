@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
     }
+
     class LoadMainRecyclerView extends AsyncTask<Void, Void, Void> {
         MainActivityAdapter adapter;
         LinearLayoutManager layoutManager;

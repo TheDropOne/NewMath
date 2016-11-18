@@ -22,6 +22,5 @@ public class SublistActivity extends AppCompatActivity {
         this.formulas = getIntent().getParcelableArrayListExtra("CHAPTER");
 
 
-
     }
 }
