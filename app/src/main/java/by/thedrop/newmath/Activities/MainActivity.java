@@ -13,11 +13,13 @@ import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.RecyclerViewAdapters.MainActivityAdapter;
 import by.thedrop.newmath.Templates.MainActivityTemplate;
+import by.thedrop.newmath.Templates.SublistTemplate;
 
 public class MainActivity extends AppCompatActivity {
 
     public static MainActivityTemplate template;
     private List<MainActivityTemplate> chapters;
+    public static List<SublistTemplate> underChapters;
     RecyclerView recyclerView;
 
     //public static List<FormulaTemplate> underChapters;

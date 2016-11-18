@@ -1,16 +1,22 @@
 package by.thedrop.newmath.RecyclerViewAdapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import by.thedrop.newmath.Templates.MainActivityTemplate;
+import by.thedrop.newmath.Activities.MainActivity;
+import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.R;
+import by.thedrop.newmath.Templates.MainActivityTemplate;
+import by.thedrop.newmath.Templates.SublistTemplate;
 
 /**
  * Created by Semen on 16-Nov-16.
@@ -46,33 +52,33 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
             public void onClick(View v) {
                 int chapter = template.getName();
 
+                List<SublistTemplate> tempList = new ArrayList<SublistTemplate>();
+
                 switch (chapter){
+                    case R.string.help_author                : tempList = Constants.mHelpAuthor;                break;
+                    case R.string.advices            : tempList = Constants.mAdvices;                   break;
+                    case R.string.answersEgeCT              : tempList = Constants.mAnswersEgeCT;              break;
+                    case R.string.typicalTasks               : tempList = Constants.mTypicalTasks;              break;
+                    case R.string.perimetr                     : tempList = Constants.mPerimetr;                  break;
+                    case R.string.areaPlaneFigures        : tempList = Constants.mAreaPlaneFigures;          break;
+                    case R.string.areaOfSurface          : tempList = Constants.mAreaOfSurface;             break;
+                    case R.string.volume                    : tempList = Constants.mVolume;                    break;
+                    case R.string.triangle                  : tempList = Constants.mTriangle;                  break;
+                    case R.string.radiusInscribedCircle  : tempList = Constants.mRadiusInscribedCircle;     break;
+                    case R.string.radiusCircumscribedCircle  : tempList = Constants.mRadiusCircumscribedCircle; break;
+                    case R.string.algebra                      : tempList = Constants.mAlgebra;                   break;
+                    case R.string.integrals      : tempList = Constants.mIntegrals;                 break;
+                    //case R.string.usefulResources: MainActivity.underChapters = AtomicKernelPhysics.getList();break;
 
-                    case R.string.help_author : MainActivity.underChapters = Kinematics.getList();                  break;
-                    case R.string.advices : MainActivity.underChapters = Dynamics.getList();                      break;
-                    case R.string.answersEgeCT : MainActivity.underChapters = ConservationLaws.getList();     break;
-                    case R.string.typicalTasks : MainActivity.underChapters = Electrostatics.getList();          break;
-                    case R.string.perimetr : MainActivity.underChapters = DirectCurrent.getList();           break;
-                    case R.string.areaPlaneFigures : MainActivity.underChapters = MagneticField.getList();           break;
-                    case R.string.areaOfSurface: MainActivity.underChapters = OscillationLaws.getList();      break;
-                    case R.string.volume : MainActivity.underChapters = Optics.getList();                          break;
-                    case R.string.triangle : MainActivity.underChapters = Relativity.getList();      break;
-                    case R.string.radiusInscribedCircle : MainActivity.underChapters = QuantumPhysics.getList();        break;
-                    case R.string.radiusCircumscribedCircle : MainActivity.underChapters = MolecularPhysics.getList();   break;
-                    case R.string.algebra : MainActivity.underChapters = Thermodynamics.getList();           break;
-                    case R.string.integrals: MainActivity.underChapters = AtomicKernelPhysics.getList();break;
-                    case R.string.usefulResources: MainActivity.underChapters = AtomicKernelPhysics.getList();break;
-
-                    default: MainActivity.underChapters = Kinematics.getList();
-
+                    default: MainActivity.underChapters = Constants.mHelpAuthor;
                 }
 
-                Toast.makeText(MainActivity.getContext(),template.getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),template.getName(),Toast.LENGTH_SHORT).show();
 
                 MainActivity.template = template;
-                Intent intent = new Intent(MainActivity.getContext(), FormulasList.class);
+                Intent intent = new Intent(v.getContext(), FormulasList.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                MainActivity.context.startActivity(intent);
+                v.getContext().startActivity(intent);
 
             }
         });

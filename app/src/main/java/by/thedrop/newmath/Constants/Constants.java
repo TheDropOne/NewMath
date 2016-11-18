@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import by.thedrop.newmath.Templates.MainActivityTemplate;
 import by.thedrop.newmath.R;
+import by.thedrop.newmath.Templates.SublistTemplate;
 
 /**
  * Created by Semen on 16-Nov-16.
  */
 
 public class Constants {
+
     public static ArrayList<MainActivityTemplate> chapters = new ArrayList<>();
 
     public static void initializeChapters() {
@@ -46,5 +48,26 @@ public class Constants {
         chapters.add(algebra);
         chapters.add(integrals);
         chapters.add(usefulResources);
+    }
+
+
+    public static ArrayList<SublistTemplate> mHelpAuthor = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mAdvices = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mAnswersEgeCT = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mTypicalTasks = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mPerimetr = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mAreaPlaneFigures = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mAreaOfSurface = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mVolume = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mTriangle = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mRadiusInscribedCircle = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mRadiusCircumscribedCircle = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mTrigonometry = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mAlgebra = new ArrayList<>();
+    public static ArrayList<SublistTemplate> mIntegrals = new ArrayList<>();
+    //public static ArrayList<SublistTemplate> mUsefulResources = new ArrayList<>();
+
+    public static void initializeSubChapters() {
+
     }
 }
