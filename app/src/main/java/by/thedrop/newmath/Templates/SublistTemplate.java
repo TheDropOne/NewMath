@@ -13,6 +13,10 @@ public class SublistTemplate {
         this.location = location;
     }
 
+    public SublistTemplate(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
