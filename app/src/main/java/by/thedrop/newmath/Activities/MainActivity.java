@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import by.thedrop.newmath.Constants.Constants;
@@ -15,14 +14,12 @@ import by.thedrop.newmath.R;
 import by.thedrop.newmath.RecyclerViewAdapters.MainActivityAdapter;
 import by.thedrop.newmath.Templates.BasicChapter;
 import by.thedrop.newmath.Templates.MainActivityTemplate;
-import by.thedrop.newmath.Templates.SublistTemplate;
 
 public class MainActivity extends AppCompatActivity {
 
     public static BasicChapter template;
 
     private List<MainActivityTemplate> chapters;
-    public static List<SublistTemplate> underChapters = new ArrayList<>();
     RecyclerView recyclerView;
 
 

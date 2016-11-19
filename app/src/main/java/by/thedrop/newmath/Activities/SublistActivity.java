@@ -7,15 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import java.util.List;
-
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.RecyclerViewAdapters.SublistActivityAdapter;
-import by.thedrop.newmath.Templates.SublistTemplate;
+import by.thedrop.newmath.Templates.BasicChapter;
 
 public class SublistActivity extends AppCompatActivity {
 
-    private List<SublistTemplate> formulas;
+    private BasicChapter chapter;
     RecyclerView recyclerView;
 
     @Override
@@ -23,7 +21,7 @@ public class SublistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sublist);
 
-        this.formulas = MainActivity.underChapters;
+        this.chapter = MainActivity.template;
         recyclerView = (RecyclerView) findViewById(R.id.sublist_recyclerView);
 
         (new LoadSublistRecyclerView()).execute();
@@ -35,7 +33,7 @@ public class SublistActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            adapter = new SublistActivityAdapter(formulas);
+            adapter = new SublistActivityAdapter(chapter.mElements);
             layoutManager = new LinearLayoutManager(SublistActivity.this);
             layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
             return null;
