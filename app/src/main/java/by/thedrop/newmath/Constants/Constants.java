@@ -1,9 +1,10 @@
 package by.thedrop.newmath.Constants;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import by.thedrop.newmath.Templates.MainActivityTemplate;
 import by.thedrop.newmath.R;
+import by.thedrop.newmath.Templates.MainActivityTemplate;
 import by.thedrop.newmath.Templates.SublistTemplate;
 
 /**
@@ -11,6 +12,8 @@ import by.thedrop.newmath.Templates.SublistTemplate;
  */
 
 public class Constants {
+
+    public static final String CHAPTER_INTENT_FLAG = "CHAPTER";
 
     public static ArrayList<MainActivityTemplate> chapters = new ArrayList<>();
 
@@ -51,23 +54,44 @@ public class Constants {
     }
 
 
-    public static ArrayList<SublistTemplate> mHelpAuthor = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mAdvices = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mAnswersEgeCT = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mTypicalTasks = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mPerimetr = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mAreaPlaneFigures = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mAreaOfSurface = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mVolume = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mTriangle = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mRadiusInscribedCircle = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mRadiusCircumscribedCircle = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mTrigonometry = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mAlgebra = new ArrayList<>();
-    public static ArrayList<SublistTemplate> mIntegrals = new ArrayList<>();
+    public static List<SublistTemplate> mHelpAuthor = new ArrayList<>();
+
+    private static void initializeHelpAuthor() {
+        mHelpAuthor = asList("Угадываем правильный ответ", "Написать хороший отзыв:)","Вступить в нашу группу вк","Рассказать друзьям!");
+    }
+
+    public static List<SublistTemplate> mAdvices = new ArrayList<>();
+    public static List<SublistTemplate> mAnswersEgeCT = new ArrayList<>();
+    public static List<SublistTemplate> mTypicalTasks = new ArrayList<>();
+    public static List<SublistTemplate> mPerimetr = new ArrayList<>();
+    public static List<SublistTemplate> mAreaPlaneFigures = new ArrayList<>();
+    public static List<SublistTemplate> mAreaOfSurface = new ArrayList<>();
+    public static List<SublistTemplate> mVolume = new ArrayList<>();
+    public static List<SublistTemplate> mTriangle = new ArrayList<>();
+    public static List<SublistTemplate> mRadiusInscribedCircle = new ArrayList<>();
+    public static List<SublistTemplate> mRadiusCircumscribedCircle = new ArrayList<>();
+    public static List<SublistTemplate> mTrigonometry = new ArrayList<>();
+    public static List<SublistTemplate> mAlgebra = new ArrayList<>();
+    public static List<SublistTemplate> mIntegrals = new ArrayList<>();
     //public static ArrayList<SublistTemplate> mUsefulResources = new ArrayList<>();
 
     public static void initializeSubChapters() {
+        initializeHelpAuthor();
+    }
 
+    private static List<SublistTemplate> asList(String... strings) {
+        List<SublistTemplate> list = new ArrayList<>();
+        for (String s : strings) {
+            list.add(new SublistTemplate(s));
+        }
+        return list;
+    }
+
+    private static List<SublistTemplate> asList(Integer... integers) {
+        List<SublistTemplate> list = new ArrayList<>();
+        for (Integer i : integers) {
+            list.add(new SublistTemplate(i));
+        }
+        return list;
     }
 }

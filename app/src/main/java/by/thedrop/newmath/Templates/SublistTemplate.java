@@ -5,7 +5,7 @@ package by.thedrop.newmath.Templates;
  */
 
 public class SublistTemplate {
-    private String name;
+    private String name = "noname";
     private int location;
 
     public SublistTemplate(String name, int location) {
@@ -15,6 +15,9 @@ public class SublistTemplate {
 
     public SublistTemplate(String name) {
         this.name = name;
+    }
+    public SublistTemplate(Integer location) {
+        this.location = location;
     }
 
     public String getName() {
