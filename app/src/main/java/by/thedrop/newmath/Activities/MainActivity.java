@@ -1,10 +1,14 @@
 package by.thedrop.newmath.Activities;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.List;
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<MainActivityTemplate> chapters;
     RecyclerView recyclerView;
+    FloatingActionButton fab;
 
 
     @Override
@@ -32,11 +37,25 @@ public class MainActivity extends AppCompatActivity {
 
         this.chapters = Constants.chapters;
         recyclerView = (RecyclerView) findViewById(R.id.main_recyclerView);
+        fab = (FloatingActionButton) findViewById(R.id.fab_add);
 
-        //DO WITH ASYNC TASK
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri groupInVk = Uri.parse("http://vk.com/club114807844");
+                Intent goToGroup = new Intent(Intent.ACTION_VIEW,groupInVk);
+                try{
+                    startActivity(goToGroup);
+                }catch (Exception ex){
+                    ex.printStackTrace();
+                    Toast.makeText(view.getContext(),R.string.error_message, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+                //DO WITH ASYNC TASK --- Done
         (new InitializeConstants()).execute();
         (new LoadMainRecyclerView()).execute();
-
     }
 
     class InitializeConstants extends AsyncTask<Void, Void, Void> {
