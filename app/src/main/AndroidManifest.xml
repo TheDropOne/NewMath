@@ -17,6 +17,10 @@
         </activity>
         <activity android:name=".Activities.SublistActivity">
         </activity>
+        <activity android:name=".Activities.TextActivity">
+        </activity>
+        <activity android:name=".Activities.ImageActivity">
+        </activity>
     </application>
 
 </manifest>

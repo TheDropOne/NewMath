@@ -10,4 +10,7 @@ public class UsefulResources extends BasicChapter {
     public UsefulResources() {
 
     }
+
+    //
+
 }

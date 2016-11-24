@@ -11,4 +11,7 @@ public class RadiusInscribedCircle extends BasicChapter {
     public RadiusInscribedCircle() {
         this.mElements = Constants.mRadiusInscribedCircle;
     }
+
+    //"Треугольник", "Прямоугольный треугольник", "Равносторонний треугольник", "Равнобедренный треугольник", "Квадрат", "Правильный многоугольник", "Ромб", "Трапеция", "Шестиугольник");
+
 }

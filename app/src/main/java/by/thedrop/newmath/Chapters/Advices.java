@@ -12,4 +12,13 @@ public class Advices extends BasicChapter {
     public Advices() {
         this.mElements = Constants.mAdvices;
     }
+
+    //"Посмотреть рекламу", "Написать хороший отзыв:)","Вступить в нашу группу вк","Рассказать друзьям!"
+
+    @Override
+    public void getBehavior(int i) {
+        /*switch (i){
+            case R.
+        }*/
+    }
 }

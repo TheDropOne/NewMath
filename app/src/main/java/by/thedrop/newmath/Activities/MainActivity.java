@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        template = new BasicChapter();
+
         this.chapters = Constants.chapters;
         recyclerView = (RecyclerView) findViewById(R.id.main_recyclerView);
 

@@ -11,4 +11,7 @@ public class Integrals extends BasicChapter {
     public Integrals() {
         this.mElements = Constants.mIntegrals;
     }
+
+    //"Производная", "Первообразная", "Интегралы", "Эквивалентности", "Неопределенный Интеграл");
+
 }

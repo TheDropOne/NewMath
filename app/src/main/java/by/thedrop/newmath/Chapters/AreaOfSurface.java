@@ -11,4 +11,7 @@ public class AreaOfSurface extends BasicChapter {
     public AreaOfSurface() {
         this.mElements = Constants.mAreaOfSurface;
     }
+
+    //"Куб", "Цилиндр", "Сфера", "Прямоугольный параллелепипед", "Правильная пирамида", "Правильная усеченная пирамида", "Конус", "Усеченный конус", "Шаровой сегмент", "Шаровой сектор", "Шаровой слой");
+
 }

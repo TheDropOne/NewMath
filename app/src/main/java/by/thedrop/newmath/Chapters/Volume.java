@@ -11,4 +11,7 @@ public class Volume extends BasicChapter {
     public Volume() {
         this.mElements = Constants.mVolume;
     }
+
+    //
+
 }

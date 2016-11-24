@@ -11,4 +11,7 @@ public class RadiusCircumscribedCircle extends BasicChapter {
     public RadiusCircumscribedCircle() {
         this.mElements = Constants.mRadiusCircumscribedCircle;
     }
+
+    //"Треугольник", "Прямоугольный треугольник", "Равносторонний треугольник", "Равнобедренный треугольник", "Квадрат", "Правильный шестиугольник", "Правильный многоугольник", "Прямоугольник", "Равнобедренная трапеция");
+
 }

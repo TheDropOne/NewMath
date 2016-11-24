@@ -7,26 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
 import by.thedrop.newmath.Activities.MainActivity;
 import by.thedrop.newmath.Activities.SublistActivity;
-import by.thedrop.newmath.Chapters.Advices;
-import by.thedrop.newmath.Chapters.Algebra;
-import by.thedrop.newmath.Chapters.AnswersEgeCT;
-import by.thedrop.newmath.Chapters.AreaOfSurface;
-import by.thedrop.newmath.Chapters.AreaPlaneFigures;
 import by.thedrop.newmath.Chapters.HelpAuthor;
-import by.thedrop.newmath.Chapters.Integrals;
-import by.thedrop.newmath.Chapters.Perimetr;
-import by.thedrop.newmath.Chapters.RadiusCircumscribedCircle;
-import by.thedrop.newmath.Chapters.RadiusInscribedCircle;
-import by.thedrop.newmath.Chapters.Triangle;
-import by.thedrop.newmath.Chapters.Trigonometry;
-import by.thedrop.newmath.Chapters.TypicalTasks;
-import by.thedrop.newmath.Chapters.Volume;
+import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.Templates.MainActivityTemplate;
 
@@ -62,56 +49,11 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         holder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int chapter = currentElement.getName();
-
-                switch (chapter) {
-                    case R.string.help_author:
-                        MainActivity.template = new HelpAuthor();
-                        break;
-                    case R.string.advices:
-                        MainActivity.template = new Advices();
-                        break;
-                    case R.string.answersEgeCT:
-                        MainActivity.template = new AnswersEgeCT();
-                        break;
-                    case R.string.typicalTasks:
-                        MainActivity.template = new TypicalTasks();
-                        break;
-                    case R.string.perimetr:
-                        MainActivity.template = new Perimetr();
-                        break;
-                    case R.string.areaPlaneFigures:
-                        MainActivity.template = new AreaPlaneFigures();
-                        break;
-                    case R.string.areaOfSurface:
-                        MainActivity.template = new AreaOfSurface();
-                        break;
-                    case R.string.volume:
-                        MainActivity.template = new Volume();
-                        break;
-                    case R.string.triangle:
-                        MainActivity.template = new Triangle();
-                        break;
-                    case R.string.radiusInscribedCircle:
-                        MainActivity.template = new RadiusInscribedCircle();
-                        break;
-                    case R.string.radiusCircumscribedCircle:
-                        MainActivity.template = new RadiusCircumscribedCircle();
-                        break;
-                    case R.string.trigonometry:
-                        MainActivity.template = new Trigonometry();
-                        break;
-                    case R.string.algebra:
-                        MainActivity.template = new Algebra();
-                        break;
-                    case R.string.integrals:
-                        MainActivity.template = new Integrals();
-                        break;
-                    default:
-                        MainActivity.template = new HelpAuthor();
+                try {
+                    MainActivity.template = Constants.chaptersMap.get(currentElement.getName());
+                } catch (Exception ex) {
+                    MainActivity.template = new HelpAuthor();
                 }
-                Toast.makeText(v.getContext(), currentElement.getName(), Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(v.getContext(), SublistActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 v.getContext().startActivity(intent);

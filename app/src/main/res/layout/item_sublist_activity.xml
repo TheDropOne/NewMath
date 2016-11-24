@@ -30,6 +30,6 @@
         android:paddingStart="14dp"
         android:text="Хитрости и советы"
         android:textColor="#000000"
-        android:textSize="22sp"/>
+        android:textSize="24sp"/>
 
 </android.support.v7.widget.CardView>

@@ -8,6 +8,7 @@ import java.util.List;
 
 public class BasicChapter {
     public List<SublistTemplate> mElements;
-    //public void
 
+    public void getBehavior(int i) {
+    }
 }

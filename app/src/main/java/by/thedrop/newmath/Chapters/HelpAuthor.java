@@ -11,4 +11,7 @@ public class HelpAuthor extends BasicChapter {
     public HelpAuthor() {
         this.mElements = Constants.mHelpAuthor;
     }
+
+    //"Посмотреть рекламу", "Написать хороший отзыв:)","Вступить в нашу группу вк","Рассказать друзьям!");
+
 }
