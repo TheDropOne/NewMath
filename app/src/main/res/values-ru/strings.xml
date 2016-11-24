@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Math All Formulas</string>
+    <string name="app_name">Все формулы. Математика</string>
     <string name="error_message">Что-то не так, перезапустите приложение</string>
 
     <string name="help_author">Помочь автору</string>
@@ -8,21 +9,21 @@
     <string name="help_author_join_group">Вступить в нашу группу вк</string>
     <string name="help_author_tell_friends">Рассказать друзьям!</string>
 
-    <string name="advices">Tricks and tips</string>
-    <string name="advices_guess_answer">Guessing right answer</string>
-    <string name="advices_week_until_exam">A week until exam</string>
+    <string name="advices">Хитрости и советы</string>
+    <string name="advices_guess_answer">Угадываем правильный ответ</string>
+    <string name="advices_week_until_exam">До экзамена неделя, я ничего не знаю</string>
     <string name="advices_better_way_to_prepare">Как лучше готовиться?</string>
-    <string name="advices_prepare_on_100">Thinking about maximum score</string>
-    <string name="advices_time_using">Time using</string>
-    <string name="advices_day_before">A day before</string>
-    <string name="advices_in_test">During the test</string>
-    <string name="advices_answers_from_teacher">Tips from teachers</string>
-    <string name="advices_how_to_learn_trigonometry">How to learn trigonometry</string>
-    <string name="advices_the_best_way_to_prerare">What is the most important?</string>
-    <string name="advices_not_miss_the_answer">How to not miss the correct answer</string>
-    <string name="advices_you_will_pass">You\'ll pass</string>
+    <string name="advices_prepare_on_100">Настроиться на 100</string>
+    <string name="advices_time_using">Использование времени</string>
+    <string name="advices_day_before">За день до</string>
+    <string name="advices_in_test">Во время теста</string>
+    <string name="advices_answers_from_teacher">Советы на ЕГЭ от репетиторов</string>
+    <string name="advices_how_to_learn_trigonometry">Как учить тригонометрию</string>
+    <string name="advices_the_best_way_to_prerare">Что самое главное?</string>
+    <string name="advices_not_miss_the_answer">Как не упустить ответ?</string>
+    <string name="advices_you_will_pass">Ты сдашь!</string>
 
-    <string name="answersEgeCT">EGE and CT answers</string>
+    <string name="answersEgeCT">Ответы ЕГЭ и ЦТ</string>
     <string name="answersEgeCT_ege2015demo">Ответы ЕГЭ 2015 демо</string>
     <string name="answersEgeCT_gia2015">Ответы ГИА 2015</string>
     <string name="answersEgeCT_rt20162">Ответы РТ 2 2016 В1</string>
@@ -42,7 +43,6 @@
     <string name="typicalProblems_answers">Ответы</string>
 
 
-
     <string name="perimeter">Периметр</string>
     <string name="perimeter_triangle">Треугольник</string>
     <string name="perimeter_square">Квадрат</string>
@@ -53,13 +53,13 @@
     <string name="perimeter_trapeze">Трапеция</string>
     <string name="perimeter_arc_length">Длина дуги</string>
 
-    <string name="areaPlaneFigures">Plane figures area</string>
+    <string name="areaPlaneFigures">Площадь плоских фигур</string>
     <string name="areaPlaneFigures_square">Квадрат</string>
-    <string name="areaPlaneFigures_circle">Circle</string>
+    <string name="areaPlaneFigures_circle">Круг</string>
     <string name="areaPlaneFigures_rectangle">Прямоугольник</string>
     <string name="areaPlaneFigures_right_triangle">Прямоугольный треугольник</string>
     <string name="areaPlaneFigures_isosceles_triangle">Равнобедренный треугольник</string>
-    <string name="areaPlaneFigures_equilateral_triangle">Equilateral triangle</string>
+    <string name="areaPlaneFigures_equilateral_triangle">Равносторонний треугольник</string>
     <string name="areaPlaneFigures_triangle">Треугольник</string>
     <string name="areaPlaneFigures_triangle_2sides_angle">Треугольник (2 стороны и угол)</string>
     <string name="areaPlaneFigures_triangle_side_2angle">Треугольник (сторона и 2 угла)</string>
@@ -69,22 +69,22 @@
     <string name="areaPlaneFigures_trapeze">Трапеция</string>
     <string name="areaPlaneFigures_regular_polygon">Правильный многоугольник</string>
     <string name="areaPlaneFigures_ring">Кольцо</string>
-    <string name="areaPlaneFigures_ellipce">Ellipce</string>
+    <string name="areaPlaneFigures_ellipce">Эллипс</string>
     <string name="areaPlaneFigures_ring_sector">Сектор кольца</string>
-    <string name="areaPlaneFigures_circle_sector">Circle sector</string>
+    <string name="areaPlaneFigures_circle_sector">Сектор круга</string>
 
-    <string name="areaOfSurface">Surface area</string>
-    <string name="areaOfSurface_cube">Cube</string>
-    <string name="areaOfSurface_cylinder">Cylinder</string>
-    <string name="areaOfSurface_sphere">Sphere</string>
-    <string name="areaOfSurface_cuboid">Cuboid</string>
-    <string name="areaOfSurface_regular_pyramid">Regular pyramid</string>
-    <string name="areaOfSurface_frustum">Frustrum</string>
-    <string name="areaOfSurface_cone">Cone</string>
-    <string name="areaOfSurface_conoid">Conoid</string>
-    <string name="areaOfSurface_sphere_segment">Sphere segment</string>
-    <string name="areaOfSurface_sphere_sector">Sphere sector</string>
-    <string name="areaOfSurface_sphere_layer">Sphere layer</string>
+    <string name="areaOfSurface">Площадь поверхности</string>
+    <string name="areaOfSurface_cube">Куб</string>
+    <string name="areaOfSurface_cylinder">Цилиндр</string>
+    <string name="areaOfSurface_sphere">Сфера</string>
+    <string name="areaOfSurface_cuboid">Прямоугольный параллелепипед</string>
+    <string name="areaOfSurface_regular_pyramid">Правильная пирамида</string>
+    <string name="areaOfSurface_frustum">Правильная усеченная пирамида</string>
+    <string name="areaOfSurface_cone">Конус</string>
+    <string name="areaOfSurface_conoid">Усеченный конус</string>
+    <string name="areaOfSurface_sphere_segment">Шаровой сегмент</string>
+    <string name="areaOfSurface_sphere_sector">Шаровой сектор</string>
+    <string name="areaOfSurface_sphere_layer">Шаровой слой</string>
 
     <string name="volume">Объем тел</string>
     <string name="volume_cube">Куб</string>
@@ -147,16 +147,16 @@
     <string name="trigonometry_squared_function">Функция в квадрате</string>
     <string name="trigonometry_cubed_function">Функция в кубе</string>
 
-    <string name="algebra">Algebra</string>
-    <string name="abridgedMultiplication">Abridged multiplication formulas</string>
-    <string name="algebra_arithmetic_progression">Arithmetic progression</string>
-    <string name="algebra_geometric_progression">Geometric progression</string>
-    <string name="algebra_tangent_equation">Tangent equation</string>
+    <string name="algebra">Алгебра</string>
+    <string name="abridgedMultiplication">Формулы сокращенного умножения</string>
+    <string name="algebra_arithmetic_progression">Арифметическая прогрессия</string>
+    <string name="algebra_geometric_progression">Геометрическая прогрессия</string>
+    <string name="algebra_tangent_equation">Уравнение касательной</string>
     <string name=""></string>
     <string name=""></string>
-    <string name="algebra_logarithm_properties">Logarithm properties</string>
+    <string name="algebra_logarithm_properties">Свойства логарифма</string>
     <string name="algebra_">Показательные неравенства</string>
-    <string name="algebra_parabola_vertex_coordinates">Parabola vertex coordinates</string>
+    <string name="algebra_parabola_vertex_coordinates">Координаты вершины параболы</string>
 
     <string name="integrals">Производные и интегралы</string>
     <string name="integrals_derivative">Производная</string>
