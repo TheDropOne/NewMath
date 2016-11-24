@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">Math All Formulas</string>
-    <string name="error_message">Что-то не так, перезапустите приложение</string>
+    <string name="error_message">Something gone wrong, please, restart application</string>
 
-    <string name="help_author">Помочь автору</string>
-    <string name="help_author_watch_ad">Посмотреть рекламу</string>
-    <string name="help_author_left_feedback">Написать хороший отзыв:)</string>
-    <string name="help_author_join_group">Вступить в нашу группу вк</string>
-    <string name="help_author_tell_friends">Рассказать друзьям!</string>
+    <string name="help_author">Help author</string>
+    <string name="help_author_watch_ad">Watch ad</string>
+    <string name="help_author_left_feedback">Left good feedback :)</string>
+    <string name="help_author_join_group">Join community</string>
+    <string name="help_author_tell_friends">Tell friends!</string>
 
     <string name="advices">Tricks and tips</string>
     <string name="advices_guess_answer">Guessing right answer</string>
     <string name="advices_week_until_exam">A week until exam</string>
-    <string name="advices_better_way_to_prepare">Как лучше готовиться?</string>
+    <string name="advices_better_way_to_prepare">Better way to prepare?</string>
     <string name="advices_prepare_on_100">Thinking about maximum score</string>
     <string name="advices_time_using">Time using</string>
     <string name="advices_day_before">A day before</string>
@@ -23,54 +23,54 @@
     <string name="advices_you_will_pass">You\'ll pass</string>
 
     <string name="answersEgeCT">EGE and CT answers</string>
-    <string name="answersEgeCT_ege2015demo">Ответы ЕГЭ 2015 демо</string>
-    <string name="answersEgeCT_gia2015">Ответы ГИА 2015</string>
-    <string name="answersEgeCT_rt20162">Ответы РТ 2 2016 В1</string>
-    <string name="answersEgeCT_rt20163">Ответы РТ 3 2016 В1</string>
-    <string name="answersEgeCT_ct2011">Ответы ЦТ 2011 В1</string>
-    <string name="answersEgeCT_ct2012">Ответы ЦТ 2012 В3</string>
-    <string name="answersEgeCT_ct2013">Ответы ЦТ 2013 В1</string>
-    <string name="answersEgeCT_ct2014">Ответы ЦТ 2014 В1</string>
-    <string name="answersEgeCT_ct2015">Ответы ЦТ 2015 В1</string>
+    <string name="answersEgeCT_ege2015demo">Answers EGE 2015 demo</string>
+    <string name="answersEgeCT_gia2015">Answers GIA 2015</string>
+    <string name="answersEgeCT_rt20162">Answers RT 2 2016 B1</string>
+    <string name="answersEgeCT_rt20163">Answers RT 3 2016 B1</string>
+    <string name="answersEgeCT_ct2011">Answers CT 2011 B1</string>
+    <string name="answersEgeCT_ct2012">Answers CT 2012 B3</string>
+    <string name="answersEgeCT_ct2013">Answers CT 2013 B1</string>
+    <string name="answersEgeCT_ct2014">Answers CT 2014 B1</string>
+    <string name="answersEgeCT_ct2015">Answers CT 2015 B1</string>
 
-    <string name="typicalProblems">Типовые задачи</string>
-    <string name="typicalProblemsSolutions">Решение типовых задач</string>
-    <string name="typicalProblems_planimetry">Планиметрия</string>
-    <string name="typicalProblems_stereometry">Стереометрия</string>
-    <string name="typicalProblems_trig_equations">Тригонометрические уравнения</string>
-    <string name="typicalProblems_equations_in_problems">Уравнения в решении задач</string>
-    <string name="typicalProblems_answers">Ответы</string>
+    <string name="typicalProblems">Typical problems</string>
+    <string name="typicalProblemsSolutions">Solutions of typicals problems</string>
+    <string name="typicalProblems_planimetry">Planimetry</string>
+    <string name="typicalProblems_stereometry">Stereometry</string>
+    <string name="typicalProblems_trig_equations">Trigonometrial equations</string>
+    <string name="typicalProblems_equations_in_problems">Equations in typical problems</string>
+    <string name="typicalProblems_answers">Answers</string>
 
 
 
-    <string name="perimeter">Периметр</string>
-    <string name="perimeter_triangle">Треугольник</string>
-    <string name="perimeter_square">Квадрат</string>
-    <string name="perimeter_rectangle">Прямоугольник</string>
-    <string name="perimeter_parallelogram">Параллелограмм</string>
-    <string name="perimeter_rhombus">Ромб</string>
-    <string name="perimeter_circumference">Длина окружности</string>
-    <string name="perimeter_trapeze">Трапеция</string>
-    <string name="perimeter_arc_length">Длина дуги</string>
+    <string name="perimeter">Perimeter</string>
+    <string name="perimeter_triangle">Triangle</string>
+    <string name="perimeter_square">Square</string>
+    <string name="perimeter_rectangle">Rectangle</string>
+    <string name="perimeter_parallelogram">Parallelogram</string>
+    <string name="perimeter_rhombus">Rhombus</string>
+    <string name="perimeter_circumference">Circumference</string>
+    <string name="perimeter_trapeze">Trapeze</string>
+    <string name="perimeter_arc_length">Arc length</string>
 
     <string name="areaPlaneFigures">Plane figures area</string>
-    <string name="areaPlaneFigures_square">Квадрат</string>
+    <string name="areaPlaneFigures_square">Square</string>
     <string name="areaPlaneFigures_circle">Circle</string>
-    <string name="areaPlaneFigures_rectangle">Прямоугольник</string>
-    <string name="areaPlaneFigures_right_triangle">Прямоугольный треугольник</string>
-    <string name="areaPlaneFigures_isosceles_triangle">Равнобедренный треугольник</string>
+    <string name="areaPlaneFigures_rectangle">Rectangle</string>
+    <string name="areaPlaneFigures_right_triangle">Right recctangle</string>
+    <string name="areaPlaneFigures_isosceles_triangle">Isosceles triangle</string>
     <string name="areaPlaneFigures_equilateral_triangle">Equilateral triangle</string>
-    <string name="areaPlaneFigures_triangle">Треугольник</string>
-    <string name="areaPlaneFigures_triangle_2sides_angle">Треугольник (2 стороны и угол)</string>
-    <string name="areaPlaneFigures_triangle_side_2angle">Треугольник (сторона и 2 угла)</string>
-    <string name="areaPlaneFigures_geron_formula">Треугольник (Формула Герона)</string>
-    <string name="areaPlaneFigures_rhombus">Ромб</string>
-    <string name="areaPlaneFigures_parallelogram">Параллелограм</string>
-    <string name="areaPlaneFigures_trapeze">Трапеция</string>
-    <string name="areaPlaneFigures_regular_polygon">Правильный многоугольник</string>
-    <string name="areaPlaneFigures_ring">Кольцо</string>
+    <string name="areaPlaneFigures_triangle">Triangle</string>
+    <string name="areaPlaneFigures_triangle_2sides_angle">Triangle (2 sides and angle)</string>
+    <string name="areaPlaneFigures_triangle_side_2angle">Triangle (side and 2 angles)</string>
+    <string name="areaPlaneFigures_geron_formula">Triangle (Heron formula)</string>
+    <string name="areaPlaneFigures_rhombus">Rhombus</string>
+    <string name="areaPlaneFigures_parallelogram">Parallelogram</string>
+    <string name="areaPlaneFigures_trapeze">Trapeze</string>
+    <string name="areaPlaneFigures_regular_polygon">Regular Polygon</string>
+    <string name="areaPlaneFigures_ring">Ring</string>
     <string name="areaPlaneFigures_ellipce">Ellipce</string>
-    <string name="areaPlaneFigures_ring_sector">Сектор кольца</string>
+    <string name="areaPlaneFigures_ring_sector">Ring sector</string>
     <string name="areaPlaneFigures_circle_sector">Circle sector</string>
 
     <string name="areaOfSurface">Surface area</string>
@@ -86,66 +86,66 @@
     <string name="areaOfSurface_sphere_sector">Sphere sector</string>
     <string name="areaOfSurface_sphere_layer">Sphere layer</string>
 
-    <string name="volume">Объем тел</string>
-    <string name="volume_cube">Куб</string>
-    <string name="volume_cuboid">Параллелепипед</string>
-    <string name="volume_tetrahedron">Тетраэдр</string>
-    <string name="volume_pyramid">Пирамида</string>
-    <string name="volume_regular_pyramid">Правильная пирамида</string>
-    <string name="volume_regular_triangular_pyramid">Правильная треугольная пирамида</string>
-    <string name="volume_regular_square_pyramid">Правильная четырехугольная пирамида</string>
-    <string name="volume_cone">Конус</string>
-    <string name="volume_frustrum">Усеченная пирамида</string>
-    <string name="volume_conoid">Усеченный конус</string>
+    <string name="volume">Volume</string>
+    <string name="volume_cube">Cube</string>
+    <string name="volume_cuboid">Cuboid</string>
+    <string name="volume_tetrahedron">Tetrahedron</string>
+    <string name="volume_pyramid">Pyramid</string>
+    <string name="volume_regular_pyramid">Regular pyramid</string>
+    <string name="volume_regular_triangular_pyramid">Regular triangular pyramid</string>
+    <string name="volume_regular_square_pyramid">Regular square pyramid</string>
+    <string name="volume_cone">Cone</string>
+    <string name="volume_frustrum">Frustrum</string>
+    <string name="volume_conoid">Conoid</string>
 
 
-    <string name="triangle">Треугольник</string>
-    <string name="triangle_side_triangle">Сторона треугольника</string>
-    <string name="triangle_side_isosceles_triangle">Сторона равнобедренного треугольника</string>
-    <string name="triangle_side_equilateral_triangle">Сторона правильного треугольника</string>
-    <string name="triangle_height">Высота произвольного треугольника</string>
-    <string name="triangle_right_triangle">Высота прямоугольного треугольника</string>
-    <string name="triangle_height_median_biss_isosceles_triangle">Высота, медиана, биссектриса равнобедренного треугольника</string>
-    <string name="triangle_all_equals_equilateral_triangle">Высота = медиана = биссектриса равностороннего треугольника</string>
-    <string name="triangle_bissectriss_triangle">Биссектриса произвольного треугольника</string>
-    <string name="triangle_bissectriss_right_triangle">Биссектриса прямоугольного треугольника</string>
-    <string name="triangle_median_triangle">Медиана произвольного треугольника</string>
-    <string name="triangle_median_right_triangle">Медиана прямоугольного треугольника</string>
+    <string name="triangle">Triangle</string>
+    <string name="triangle_side_triangle">Side of the triangle</string>
+    <string name="triangle_side_isosceles_triangle">Side of the isosceles triangle</string>
+    <string name="triangle_side_equilateral_triangle">Side of the equilateral triangle</string>
+    <string name="triangle_height">Height of the triangle</string>
+    <string name="triangle_right_triangle">Height of the right triangle</string>
+    <string name="triangle_height_median_biss_isosceles_triangle">Height, median and bissectris of isosceles triangle</string>
+    <string name="triangle_all_equals_equilateral_triangle">Height = median = bissectris of the equilateral triangle</string>
+    <string name="triangle_bissectriss_triangle">Bissectriss of the triangle</string>
+    <string name="triangle_bissectriss_right_triangle">Bissectriss of the right triangle</string>
+    <string name="triangle_median_triangle">Median of the triangle</string>
+    <string name="triangle_median_right_triangle">Median of the right triangle</string>
 
-    <string name="radiusInscribedCircle">Радиус вписанной окружности</string>
-    <string name="radiusInscribedCircle_triangle">Треугольник</string>
-    <string name="radiusInscribedCircle_right_triangle">Прямоугольный треугольник</string>
-    <string name="radiusInscribedCircle_equilateral_triangle">Равносторонний треугольник</string>
-    <string name="radiusInscribedCircle_isosceles_triangle">Равнобедренный треугольник</string>
-    <string name="radiusInscribedCircle_square">Квадрат</string>
-    <string name="radiusInscribedCircle_regular_polygon">Правильный многоугольник</string>
-    <string name="radiusInscribedCircle_rhombus">Ромб</string>
-    <string name="radiusInscribedCircle_trapeze">Трапеция</string>
-    <string name="radiusInscribedCircle_hexagon">Шестиугольник</string>
+    <string name="radiusInscribedCircle">Radius of inscribed circle</string>
+    <string name="radiusInscribedCircle_triangle">Triangle</string>
+    <string name="radiusInscribedCircle_right_triangle">Right triangle</string>
+    <string name="radiusInscribedCircle_equilateral_triangle">Equilateral triangle</string>
+    <string name="radiusInscribedCircle_isosceles_triangle">Isosceles triangle</string>
+    <string name="radiusInscribedCircle_square">Square</string>
+    <string name="radiusInscribedCircle_regular_polygon">Regular polygon</string>
+    <string name="radiusInscribedCircle_rhombus">Rhombus</string>
+    <string name="radiusInscribedCircle_trapeze">Trapeze</string>
+    <string name="radiusInscribedCircle_hexagon">Hexagon</string>
 
-    <string name="radiusCircumscribedCircle">Радиус описанной окружности</string>
-    <string name="radiusCircumscribedCircle_triangle">Треугольник</string>
-    <string name="radiusCircumscribedCircle_right_triangle">Прямоугольный треугольник</string>
-    <string name="radiusCircumscribedCircle_equilateral_triangle">Равносторонний треугольник</string>
-    <string name="radiusCircumscribedCircle_isosceles_triangle">Равнобедренный треугольник</string>
-    <string name="radiusCircumscribedCircle_square">Квадрат</string>
-    <string name="radiusCircumscribedCircle_regular_hexagon">Правильный шестиугольник</string>
-    <string name="radiusCircumscribedCircle_regular_polygon">Правильный многоугольник</string>
-    <string name="radiusCircumscribedCircle_rectangle">Прямоугольник</string>
-    <string name="radiusCircumscribedCircle_equilateral_trapeze">Трапеция</string>
+    <string name="radiusCircumscribedCircle">Radius of circumscribed Circle</string>
+    <string name="radiusCircumscribedCircle_triangle">Triangle</string>
+    <string name="radiusCircumscribedCircle_right_triangle">Right triangle</string>
+    <string name="radiusCircumscribedCircle_equilateral_triangle">Equilateral triangle</string>
+    <string name="radiusCircumscribedCircle_isosceles_triangle">Isosceles triangle</string>
+    <string name="radiusCircumscribedCircle_square">Square</string>
+    <string name="radiusCircumscribedCircle_regular_hexagon">Regular hexagon</string>
+    <string name="radiusCircumscribedCircle_regular_polygon">Regular polygon</string>
+    <string name="radiusCircumscribedCircle_rectangle">Rectangle</string>
+    <string name="radiusCircumscribedCircle_equilateral_trapeze">Equilateral trapeze</string>
 
-    <string name="trigonometry">Тригонометрия</string>
-    <string name="trigonometry_values_common_angles">Значения популярных углов</string>
-    <string name="trigonometry_summ_trigonom_functions">Сумма тригонометрических функций</string>
-    <string name="trigonometry_difference_trigonom_functions">Разность тригонометрических функций</string>
-    <string name="trigonometry_multiplication_trigonom_functions">Произведение тригонометрических функций</string>
-    <string name="trigonometry_formulas_summ_angles">Формулы суммы углов</string>
-    <string name="trigonometry_formulas_diff_angles">Формулы разности углов</string>
-    <string name="trigonometry_formulas_half_angle">Формулы половинного угла</string>
-    <string name="trigonometry_formulas_triple_angle">Формулы тройного угла</string>
-    <string name="trigonometry_reduction_formulas">Формулы приведения</string>
-    <string name="trigonometry_squared_function">Функция в квадрате</string>
-    <string name="trigonometry_cubed_function">Функция в кубе</string>
+    <string name="trigonometry">Trigonometry</string>
+    <string name="trigonometry_values_common_angles">Values of common angles</string>
+    <string name="trigonometry_summ_trigonom_functions">Summ of trigometrial functions</string>
+    <string name="trigonometry_difference_trigonom_functions">Difference between functions</string>
+    <string name="trigonometry_multiplication_trigonom_functions">Multiplication of trigometry function</string>
+    <string name="trigonometry_formulas_summ_angles">Summ angles formulas</string>
+    <string name="trigonometry_formulas_diff_angles">Formulas difference angles</string>
+    <string name="trigonometry_formulas_half_angle">Half-angle formulas</string>
+    <string name="trigonometry_formulas_triple_angle">Triple angles formular</string>
+    <string name="trigonometry_reduction_formulas">Reduction formulas</string>
+    <string name="trigonometry_squared_function">Squared function</string>
+    <string name="trigonometry_cubed_function">Cubed function</string>
 
     <string name="algebra">Algebra</string>
     <string name="abridgedMultiplication">Abridged multiplication formulas</string>
@@ -158,14 +158,14 @@
     <string name="algebra_">Показательные неравенства</string>
     <string name="algebra_parabola_vertex_coordinates">Parabola vertex coordinates</string>
 
-    <string name="integrals">Производные и интегралы</string>
-    <string name="integrals_derivative">Производная</string>
-    <string name="integrals_primitive">Первообразная</string>
-    <string name="integrals_integrals">Интегралы</string>
-    <string name="integrals_equivalence">Эквивалентности</string>
-    <string name="integrals_indefinite_integral">Неопределенный интеграл</string>
+    <string name="integrals">Deritivatives and integrals</string>
+    <string name="integrals_derivative">Deritivative</string>
+    <string name="integrals_primitive">Primitive</string>
+    <string name="integrals_integrals">Integrals</string>
+    <string name="integrals_equivalence">Equivalences</string>
+    <string name="integrals_indefinite_integral">Indefinite integral</string>
 
-    <string name="usefulResources">Полезные ресурсы и книги</string>
+    <string name="usefulResources">Useful resources</string>
 
 
 </resources>

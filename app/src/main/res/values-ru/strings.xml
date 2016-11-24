@@ -132,7 +132,7 @@
     <string name="radiusCircumscribedCircle_regular_hexagon">Правильный шестиугольник</string>
     <string name="radiusCircumscribedCircle_regular_polygon">Правильный многоугольник</string>
     <string name="radiusCircumscribedCircle_rectangle">Прямоугольник</string>
-    <string name="radiusCircumscribedCircle_equilateral_trapeze">Трапеция</string>
+    <string name="radiusCircumscribedCircle_equilateral_trapeze">Равнобедренная трапеция</string>
 
     <string name="trigonometry">Тригонометрия</string>
     <string name="trigonometry_values_common_angles">Значения популярных углов</string>
