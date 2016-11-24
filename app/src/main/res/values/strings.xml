@@ -149,13 +149,11 @@
 
     <string name="algebra">Algebra</string>
     <string name="abridgedMultiplication">Abridged multiplication formulas</string>
+    <string name="algebra_viett_teorem">Viett theorem</string>
     <string name="algebra_arithmetic_progression">Arithmetic progression</string>
     <string name="algebra_geometric_progression">Geometric progression</string>
     <string name="algebra_tangent_equation">Tangent equation</string>
-    <string name=""></string>
-    <string name=""></string>
     <string name="algebra_logarithm_properties">Logarithm properties</string>
-    <string name="algebra_">Показательные неравенства</string>
     <string name="algebra_parabola_vertex_coordinates">Parabola vertex coordinates</string>
 
     <string name="integrals">Deritivatives and integrals</string>

@@ -152,10 +152,7 @@
     <string name="algebra_arithmetic_progression">Арифметическая прогрессия</string>
     <string name="algebra_geometric_progression">Геометрическая прогрессия</string>
     <string name="algebra_tangent_equation">Уравнение касательной</string>
-    <string name=""></string>
-    <string name=""></string>
     <string name="algebra_logarithm_properties">Свойства логарифма</string>
-    <string name="algebra_">Показательные неравенства</string>
     <string name="algebra_parabola_vertex_coordinates">Координаты вершины параболы</string>
 
     <string name="integrals">Производные и интегралы</string>

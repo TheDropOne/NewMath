@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static by.thedrop.newmath.R.string.*;
-
 import by.thedrop.newmath.Chapters.Advices;
 import by.thedrop.newmath.Chapters.Algebra;
 import by.thedrop.newmath.Chapters.AnswersEgeCT;
@@ -24,6 +22,8 @@ import by.thedrop.newmath.R;
 import by.thedrop.newmath.Templates.BasicChapter;
 import by.thedrop.newmath.Templates.MainActivityTemplate;
 import by.thedrop.newmath.Templates.SublistTemplate;
+
+import static by.thedrop.newmath.R.string.*;
 
 /**
  * Created by Semen on 16-Nov-16.
@@ -90,19 +90,19 @@ public class Constants {
     public static void initializeSubChapters() {
         //REWRITE WITH RESOURCES
         mHelpAuthor = asList(help_author_watch_ad, help_author_left_feedback, help_author_join_group, help_author_tell_friends);
-        mAdvices = asList(advices_guess_answer, "До экзамена неделя, я ничего не знаю", "Как лучше готовиться?", "Настроиться на 100", "Использование времени", "За день до", "Во время теста", "Советы на ЕГЭ от репетиторов", "Как учить тригонометрию?", "Что самое главное?", "Как не упустить ответ?", "Ты сдашь!");
-        mAnswersEgeCT = asList("Ответы ЕГЭ 2015 демо-вариант", "Ответы ГИА 2015", "Ответы РТ 2 2016 вариант 1", "Ответы РТ 3 2016 вариант 1", "Решение ЦТ 2011 вариант 1", "Решение ЦТ 2012 вариант 3", "Решение ЦТ 2013 вариант 1", "Решение ЦТ 2014 вариант 1", "Решение ЦТ 2015 вариант 1");
-        mTypicalProblems = asList("Планиметрия", "Стереометрия", "Тригонометрические уравнения", "Уравнения в решении задач", "Ответы и решения");
-        mPerimeter = asList("Треугольник", "Квадрат", "Прямоугольник", "Параллелограмм", "Ромб", "Длина окружности", "Трапеция", "Длина дуги");
-        mAreaPlaneFigures = asList("Квадрат", "Круг", "Прямоугольник", "Прямоугольный треугольник", "Равноберенный треугольник", "Равносторонний треугольник", "Треугольник", "Треугольник(2 стороны и угол)", "Треугольник(сторона и 2 угла)", "Треугольник(Формула Герона)", "Ромб", "Параллелограмм", "Трапеция", "Правильный многоугольник", "Кольцо", "Эллипс", "Сектор кольца", "Сектор круга");
-        mAreaOfSurface = asList("Куб", "Цилиндр", "Сфера", "Прямоугольный параллелепипед", "Правильная пирамида", "Правильная усеченная пирамида", "Конус", "Усеченный конус", "Шаровой сегмент", "Шаровой сектор", "Шаровой слой");
-        mVolume = asList("Куб", "Параллелепипед", "Тетраэдр", "Пирамида", "Правильная пирамида", "Правильная треугольная пирамида", "Правильная четырехугольная пирамида", "Конус", "Усеченная пирамида", "Усеченный конус");
-        mTriangle = asList("Сторона произвольного треугольника", "Стороны равнобедренного треугольника", "Стороны прямоугольного треугольника", "Высота произвольного треугольника", "Высота прямоугольного треугольника", "Высота, медиана, биссектриса равнобедренного треугольника", "Высота=медиана=биссектриса равностороннего треугольника", "Биссектриса произвольного треугольника", "Биссектриса прямоугольного треугольника", "Медиана произвольного треугольника", "Медиана прямоугольного треугольника");
-        mRadiusInscribedCircle = asList("Треугольник", "Прямоугольный треугольник", "Равносторонний треугольник", "Равнобедренный треугольник", "Квадрат", "Правильный многоугольник", "Ромб", "Трапеция", "Шестиугольник");
-        mRadiusCircumscribedCircle = asList("Треугольник", "Прямоугольный треугольник", "Равносторонний треугольник", "Равнобедренный треугольник", "Квадрат", "Правильный шестиугольник", "Правильный многоугольник", "Прямоугольник", "Равнобедренная трапеция");
-        mTrigonometry = asList("Значения популярных углов", "Сумма тригонометрических функций", "Разность тригонометрических функций", "Произведение тригонометрических функций", "Формулы суммы углов", "Формулы разности углов", "Формулы половинного угла", "Формулы тройного угла", "Формулы приведения", "Функция в квадрате", "Функция в кубе");
-        mAlgebra = asList("Теорема Виета", "Арифметическая прогрессия", "Геометрическая прогрессия", "Уравнение касательной", "Свойства логарифма", "Координаты вершины параболы", "Показательные неравенства", "Формулы сокращенного умножения");
-        mIntegrals = asList("Производная", "Первообразная", "Интегралы", "Эквивалентности", "Неопределенный Интеграл");
+        mAdvices = asList(advices_guess_answer, advices_week_until_exam, advices_better_way_to_prepare, advices_prepare_on_100, advices_time_using, advices_day_before, advices_in_test, advices_answers_from_teacher, advices_how_to_learn_trigonometry, advices_the_best_way_to_prerare, advices_not_miss_the_answer, advices_you_will_pass);
+        mAnswersEgeCT = asList(answersEgeCT_ege2015demo, answersEgeCT_gia2015, answersEgeCT_rt20162, answersEgeCT_rt20163, answersEgeCT_ct2011, answersEgeCT_ct2012, answersEgeCT_ct2013, answersEgeCT_ct2014, answersEgeCT_ct2015);
+        mTypicalProblems = asList(typicalProblems_planimetry, typicalProblems_stereometry, typicalProblems_trig_equations, typicalProblems_equations_in_problems, typicalProblems_answers);
+        mPerimeter = asList(perimeter_triangle, perimeter_square, perimeter_rectangle, perimeter_parallelogram, perimeter_rhombus, perimeter_circumference, perimeter_trapeze, perimeter_arc_length);
+        mAreaPlaneFigures = asList(areaPlaneFigures_square, areaPlaneFigures_circle, areaPlaneFigures_rectangle, areaPlaneFigures_right_triangle, areaPlaneFigures_isosceles_triangle, areaPlaneFigures_equilateral_triangle, areaPlaneFigures_triangle, areaPlaneFigures_triangle_2sides_angle, areaPlaneFigures_triangle_side_2angle, areaPlaneFigures_geron_formula, areaPlaneFigures_rhombus, areaPlaneFigures_parallelogram, areaPlaneFigures_trapeze, areaPlaneFigures_regular_polygon, areaPlaneFigures_ring, areaPlaneFigures_ellipce, areaPlaneFigures_ring_sector, areaPlaneFigures_circle_sector);
+        mAreaOfSurface = asList(areaOfSurface_cube, areaOfSurface_cylinder, areaOfSurface_sphere, areaOfSurface_cuboid, areaOfSurface_regular_pyramid, areaOfSurface_frustum, areaOfSurface_cone, areaOfSurface_conoid, areaOfSurface_sphere_segment, areaOfSurface_sphere_sector, areaOfSurface_sphere_layer);
+        mVolume = asList(volume_cube, volume_cuboid, volume_tetrahedron, volume_pyramid, volume_regular_pyramid, volume_regular_triangular_pyramid, volume_regular_square_pyramid, volume_cone, volume_frustrum, volume_conoid);
+        mTriangle = asList(triangle_side_triangle, triangle_side_isosceles_triangle, triangle_side_equilateral_triangle, triangle_height, triangle_right_triangle, triangle_height_median_biss_isosceles_triangle, triangle_all_equals_equilateral_triangle, triangle_bissectriss_triangle, triangle_bissectriss_right_triangle, triangle_median_triangle, triangle_median_right_triangle);
+        mRadiusInscribedCircle = asList(radiusInscribedCircle_triangle, radiusInscribedCircle_right_triangle, radiusInscribedCircle_triangle, radiusInscribedCircle_isosceles_triangle, radiusInscribedCircle_square, radiusInscribedCircle_regular_polygon, radiusInscribedCircle_rhombus, radiusInscribedCircle_trapeze, radiusInscribedCircle_hexagon);
+        mRadiusCircumscribedCircle = asList(radiusCircumscribedCircle_triangle, radiusCircumscribedCircle_right_triangle, radiusCircumscribedCircle_equilateral_triangle, radiusCircumscribedCircle_isosceles_triangle, radiusCircumscribedCircle_square, radiusCircumscribedCircle_regular_hexagon, radiusCircumscribedCircle_regular_polygon, radiusCircumscribedCircle_rectangle, radiusCircumscribedCircle_equilateral_trapeze);
+        mTrigonometry = asList(trigonometry_values_common_angles, trigonometry_summ_trigonom_functions, trigonometry_difference_trigonom_functions, trigonometry_multiplication_trigonom_functions, trigonometry_formulas_summ_angles, trigonometry_formulas_diff_angles, trigonometry_formulas_half_angle, trigonometry_formulas_triple_angle, trigonometry_reduction_formulas, trigonometry_squared_function, trigonometry_cubed_function);
+        mAlgebra = asList(algebra_viett_teorem, algebra_arithmetic_progression, algebra_geometric_progression, algebra_tangent_equation, algebra_logarithm_properties, algebra_parabola_vertex_coordinates, abridgedMultiplication);
+        mIntegrals = asList(integrals_derivative, integrals_primitive, integrals_integrals, integrals_equivalence, integrals_indefinite_integral);
 
 
         chaptersMap.put(R.string.help_author, new HelpAuthor());
