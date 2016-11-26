@@ -8,7 +8,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import by.thedrop.newmath.Activities.MainActivity;
 import by.thedrop.newmath.R;
+import by.thedrop.newmath.Templates.BasicChapter;
 import by.thedrop.newmath.Templates.SublistTemplate;
 
 /**
@@ -31,21 +33,22 @@ public class SublistActivityAdapter extends RecyclerView.Adapter<SublistActivity
     }
 
     @Override
-    public void onBindViewHolder(SublistActivityAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(SublistActivityAdapter.MyViewHolder holder, final int position) {
         final SublistTemplate template = subChapters.get(position);
 
         TextView name = holder.mTextView;
 
-        name.setText(template.getName());
+        name.setText(template.getLocation());
 
-        /*
+
         holder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                BasicChapter temp = MainActivity.template;
+                view.getContext().startActivity(temp.getBehavior(view.getContext(),template.getLocation()));
             }
         });
-        */
+
     }
 
     @Override

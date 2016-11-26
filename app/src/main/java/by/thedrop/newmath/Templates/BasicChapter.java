@@ -1,5 +1,9 @@
 package by.thedrop.newmath.Templates;
 
+import android.content.Context;
+import android.content.Intent;
+import android.util.SparseArray;
+
 import java.util.List;
 
 /**
@@ -8,7 +12,9 @@ import java.util.List;
 
 public class BasicChapter {
     public List<SublistTemplate> mElements;
+    protected SparseArray<CustomIntention> paragrahpIntent = new SparseArray<>();
 
-    public void getBehavior(int i) {
+    public Intent getBehavior(Context context, int i) {
+        return paragrahpIntent.get(i).returnIntent(context);
     }
 }

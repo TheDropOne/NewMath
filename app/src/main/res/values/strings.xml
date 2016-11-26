@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Math All Formulas</string>
     <string name="error_message">Something gone wrong, please, restart application</string>
+    <string name="share_text">Cool application for math! </string>
 
     <string name="help_author">Help author</string>
     <string name="help_author_watch_ad">Watch ad</string>

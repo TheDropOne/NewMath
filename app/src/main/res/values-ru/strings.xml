@@ -163,6 +163,8 @@
     <string name="integrals_indefinite_integral">Неопределенный интеграл</string>
 
     <string name="usefulResources">Полезные ресурсы и книги</string>
+    <string name="algebra_viett_teorem">Теорема Виета</string>
+    <string name="share_text">Готовься к экзаменам по математике с приложением \"Все формулы. Математика\". Ответы и решения ЦТ и ЕГЭ, формулы, задачи и много всего еще! \\n play.google.com/store/apps/details?id=by.thedrop.math</string>
 
 
 </resources>

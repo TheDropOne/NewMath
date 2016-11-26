@@ -21,6 +21,8 @@ import by.thedrop.newmath.Templates.MainActivityTemplate;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static String package_name;
+
     public static BasicChapter template;
 
     private List<MainActivityTemplate> chapters;
@@ -33,27 +35,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        package_name = getPackageName();
         template = new BasicChapter();
 
         this.chapters = Constants.chapters;
         recyclerView = (RecyclerView) findViewById(R.id.main_recyclerView);
-        fab = (FloatingActionButton) findViewById(R.id.fab_add);
+        fab = (FloatingActionButton) findViewById(R.id.fab_group);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Uri groupInVk = Uri.parse("http://vk.com/club114807844");
-                Intent goToGroup = new Intent(Intent.ACTION_VIEW,groupInVk);
-                try{
+                Intent goToGroup = new Intent(Intent.ACTION_VIEW, groupInVk);
+                try {
                     startActivity(goToGroup);
-                }catch (Exception ex){
+                } catch (Exception ex) {
                     ex.printStackTrace();
-                    Toast.makeText(view.getContext(),R.string.error_message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(), R.string.error_message, Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-                //DO WITH ASYNC TASK --- Done
+        //DO WITH ASYNC TASK --- Done
         (new InitializeConstants()).execute();
         (new LoadMainRecyclerView()).execute();
     }

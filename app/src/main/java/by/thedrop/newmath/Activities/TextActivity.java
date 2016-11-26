@@ -7,6 +7,8 @@ import by.thedrop.newmath.R;
 
 public class TextActivity extends AppCompatActivity {
 
+    public static int textResource;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

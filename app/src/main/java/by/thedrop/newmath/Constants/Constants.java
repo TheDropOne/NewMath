@@ -85,7 +85,25 @@ public class Constants {
     public static List<SublistTemplate> mTrigonometry = new ArrayList<>();
     public static List<SublistTemplate> mAlgebra = new ArrayList<>();
     public static List<SublistTemplate> mIntegrals = new ArrayList<>();
-    //public static ArrayList<SublistTemplate> mUsefulResources = new ArrayList<>();
+
+    /*
+    public static List<SublistTemplate> mHelpAuthorResources = new ArrayList<>();
+    public static List<SublistTemplate> mAdvicesResources = new ArrayList<>();
+    public static List<SublistTemplate> mAnswersEgeCTResources = new ArrayList<>();
+    public static List<SublistTemplate> mTypicalProblemsResources = new ArrayList<>();
+    public static List<SublistTemplate> mPerimeterResources = new ArrayList<>();
+    public static List<SublistTemplate> mAreaPlaneFiguresResources = new ArrayList<>();
+    public static List<SublistTemplate> mAreaOfSurfaceResources = new ArrayList<>();
+    public static List<SublistTemplate> mVolumeResources = new ArrayList<>();
+    public static List<SublistTemplate> mTriangleResources = new ArrayList<>();
+    public static List<SublistTemplate> mRadiusInscribedCircleResources = new ArrayList<>();
+    public static List<SublistTemplate> mRadiusCircumscribedCircleResources = new ArrayList<>();
+    public static List<SublistTemplate> mTrigonometryResources = new ArrayList<>();
+    public static List<SublistTemplate> mAlgebraResources = new ArrayList<>();
+    public static List<SublistTemplate> mIntegralsResources = new ArrayList<>();
+    */
+
+    //public static ArrayList<SublistTemplate> mUsefulResourcesResources = new ArrayList<>();
 
     public static void initializeSubChapters() {
         //REWRITE WITH RESOURCES
@@ -97,12 +115,13 @@ public class Constants {
         mAreaPlaneFigures = asList(areaPlaneFigures_square, areaPlaneFigures_circle, areaPlaneFigures_rectangle, areaPlaneFigures_right_triangle, areaPlaneFigures_isosceles_triangle, areaPlaneFigures_equilateral_triangle, areaPlaneFigures_triangle, areaPlaneFigures_triangle_2sides_angle, areaPlaneFigures_triangle_side_2angle, areaPlaneFigures_geron_formula, areaPlaneFigures_rhombus, areaPlaneFigures_parallelogram, areaPlaneFigures_trapeze, areaPlaneFigures_regular_polygon, areaPlaneFigures_ring, areaPlaneFigures_ellipce, areaPlaneFigures_ring_sector, areaPlaneFigures_circle_sector);
         mAreaOfSurface = asList(areaOfSurface_cube, areaOfSurface_cylinder, areaOfSurface_sphere, areaOfSurface_cuboid, areaOfSurface_regular_pyramid, areaOfSurface_frustum, areaOfSurface_cone, areaOfSurface_conoid, areaOfSurface_sphere_segment, areaOfSurface_sphere_sector, areaOfSurface_sphere_layer);
         mVolume = asList(volume_cube, volume_cuboid, volume_tetrahedron, volume_pyramid, volume_regular_pyramid, volume_regular_triangular_pyramid, volume_regular_square_pyramid, volume_cone, volume_frustrum, volume_conoid);
-        mTriangle = asList(triangle_side_triangle, triangle_side_isosceles_triangle, triangle_side_equilateral_triangle, triangle_height, triangle_right_triangle, triangle_height_median_biss_isosceles_triangle, triangle_all_equals_equilateral_triangle, triangle_bissectriss_triangle, triangle_bissectriss_right_triangle, triangle_median_triangle, triangle_median_right_triangle);
+        mTriangle = asList(triangle_side_triangle, triangle_side_isosceles_triangle, triangle_height, triangle_right_triangle, triangle_height_median_biss_isosceles_triangle, triangle_all_equals_equilateral_triangle, triangle_bissectriss_triangle, triangle_bissectriss_right_triangle, triangle_median_triangle, triangle_median_right_triangle);
         mRadiusInscribedCircle = asList(radiusInscribedCircle_triangle, radiusInscribedCircle_right_triangle, radiusInscribedCircle_triangle, radiusInscribedCircle_isosceles_triangle, radiusInscribedCircle_square, radiusInscribedCircle_regular_polygon, radiusInscribedCircle_rhombus, radiusInscribedCircle_trapeze, radiusInscribedCircle_hexagon);
         mRadiusCircumscribedCircle = asList(radiusCircumscribedCircle_triangle, radiusCircumscribedCircle_right_triangle, radiusCircumscribedCircle_equilateral_triangle, radiusCircumscribedCircle_isosceles_triangle, radiusCircumscribedCircle_square, radiusCircumscribedCircle_regular_hexagon, radiusCircumscribedCircle_regular_polygon, radiusCircumscribedCircle_rectangle, radiusCircumscribedCircle_equilateral_trapeze);
         mTrigonometry = asList(trigonometry_values_common_angles, trigonometry_summ_trigonom_functions, trigonometry_difference_trigonom_functions, trigonometry_multiplication_trigonom_functions, trigonometry_formulas_summ_angles, trigonometry_formulas_diff_angles, trigonometry_formulas_half_angle, trigonometry_formulas_triple_angle, trigonometry_reduction_formulas, trigonometry_squared_function, trigonometry_cubed_function);
-        mAlgebra = asList(algebra_viett_teorem, algebra_arithmetic_progression, algebra_geometric_progression, algebra_tangent_equation, algebra_logarithm_properties, algebra_parabola_vertex_coordinates, abridgedMultiplication);
+        mAlgebra = asList(algebra_viett_teorem, algebra_arithmetic_progression, algebra_geometric_progression, algebra_tangent_equation, algebra_logarithm_properties, algebra_parabola_vertex_coordinates);
         mIntegrals = asList(integrals_derivative, integrals_primitive, integrals_integrals, integrals_equivalence, integrals_indefinite_integral);
+
 
 
         chaptersMap.put(R.string.help_author, new HelpAuthor());
