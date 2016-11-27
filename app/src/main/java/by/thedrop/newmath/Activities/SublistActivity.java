@@ -52,4 +52,7 @@ public class SublistActivity extends AppCompatActivity {
             }
         }
     }
+    public String parseResource(int resource){
+        return this.getString(resource);
+    }
 }

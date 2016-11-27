@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import by.thedrop.newmath.Chapters.HelpAuthor;
 import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.RecyclerViewAdapters.MainActivityAdapter;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        HelpAuthor.shareText = getString(R.string.share_text);
         package_name = getPackageName();
         template = new BasicChapter();
 

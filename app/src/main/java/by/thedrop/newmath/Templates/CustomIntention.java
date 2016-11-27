@@ -2,6 +2,7 @@ package by.thedrop.newmath.Templates;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import by.thedrop.newmath.Activities.ImageActivity;
 import by.thedrop.newmath.Activities.TextActivity;
@@ -17,10 +18,12 @@ public class CustomIntention {
     1 - image
     2 - text
     3 - intent
+    4 - toast
      */
     private int type;
     private int imageResource;
     private int textResource;
+    private int toastResource;
     private Intent mIntent;
 
     public CustomIntention(Intent intent) {
@@ -37,12 +40,15 @@ public class CustomIntention {
             case 2:
                 textResource = resource;
                 break;
+            case 4:
+                toastResource = resource;
+                break;
             default:
                 imageResource = R.drawable.brackets;
         }
     }
     public Intent returnIntent(Context context){
-        Intent intent;
+        Intent intent = null;
         switch (type) {
             case 1:
                 intent = new Intent(context,ImageActivity.class);
@@ -54,6 +60,9 @@ public class CustomIntention {
                 break;
             case 3:
                 intent = mIntent;
+                break;
+            case 4:
+                Toast.makeText(context,toastResource,Toast.LENGTH_LONG).show();
                 break;
             default:
                 intent = new Intent(context,ImageActivity.class);

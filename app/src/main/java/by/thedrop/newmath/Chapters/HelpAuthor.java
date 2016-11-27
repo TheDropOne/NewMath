@@ -14,6 +14,7 @@ import by.thedrop.newmath.Templates.CustomIntention;
  */
 
 public class HelpAuthor extends BasicChapter {
+    public static String shareText;
     public HelpAuthor() {
         this.mElements = Constants.mHelpAuthor;
         Intent joinGroup;
@@ -28,7 +29,7 @@ public class HelpAuthor extends BasicChapter {
 
         tellFriend = new Intent(Intent.ACTION_SEND);
         tellFriend.setType("text/plain");
-        tellFriend.putExtra(Intent.EXTRA_TEXT, R.string.share_text);
+        tellFriend.putExtra(Intent.EXTRA_TEXT, shareText);
 
         paragrahpIntent.append(R.string.help_author_join_group, new CustomIntention(joinGroup));
         paragrahpIntent.append(R.string.help_author_left_feedback, new CustomIntention(leftFeedback));
