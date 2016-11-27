@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +13,9 @@
         android:id="@+id/image_activity_mainImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitStart"/>
+        android:foregroundGravity="center"
+        android:src="@drawable/answege2015"
+        android:scaleType="fitCenter"/>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -23,8 +25,8 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/ic_action_social_share"
-        app:backgroundTint="@color/colorAccent"
+        app:backgroundTint="#558B2F"
         app:fabSize="normal"
         app:layout_behavior="by.thedrop.newmath.Templates.ScrollAwareFABBehavior"
         app:rippleColor="?attr/colorBackgroundFloating"/>
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
