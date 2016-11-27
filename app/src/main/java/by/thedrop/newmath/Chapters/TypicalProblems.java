@@ -20,7 +20,6 @@ public class TypicalProblems extends BasicChapter {
         paragrahpIntent.append(R.string.typicalProblems_trig_equations, new CustomIntention(trigEquations));
         paragrahpIntent.append(R.string.typicalProblems_equations_in_problems, new CustomIntention(equationsInProblems));
         paragrahpIntent.append(R.string.typicalProblems_answers, new CustomIntention(answers));
-
     }
 
     //"Помочь автору","Планиметрия", "Стереометрия", "Тригонометрические уравнения", "Уравнения в решении задач", "Ответы и решения");
