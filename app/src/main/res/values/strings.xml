@@ -135,7 +135,7 @@
     <string name="radiusCircumscribedCircle_regular_hexagon">Regular hexagon</string>
     <string name="radiusCircumscribedCircle_regular_polygon">Regular polygon</string>
     <string name="radiusCircumscribedCircle_rectangle">Rectangle</string>
-    <string name="radiusCircumscribedCircle_equilateral_trapeze">Equilateral trapeze</string>
+    <string name="radiusCircumscribedCircle_isosceles_trapeze">Isosceles trapeze</string>
 
     <string name="trigonometry">Trigonometry</string>
     <string name="trigonometry_values_common_angles">Values of common angles</string>
