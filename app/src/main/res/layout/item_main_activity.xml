@@ -39,6 +39,6 @@
             android:layout_marginTop="3dp"
             android:layout_weight="5"
             android:scaleType="centerInside"
-            android:src="@drawable/prev_atomickernelphysics"/>
+            android:src="@drawable/icon_award"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>

@@ -2,30 +2,25 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_image"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="by.thedrop.newmath.Activities.ImageActivity">
+    android:orientation="vertical">
 
-
-    <ImageView
-        android:id="@+id/image_activity_mainImage"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_main_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        android:src="@drawable/answege2015"
-        android:scaleType="fitCenter"/>
-
+        android:layout_height="wrap_content"
+        />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_share"
+        android:id="@+id/fragment_main_fab_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_action_social_share"
-        app:backgroundTint="#558B2F"
+        android:src="@drawable/vklogo"
+        app:backgroundTint="@color/colorPrimary"
         app:fabSize="normal"
+        app:layout_behavior="by.thedrop.newmath.Behavior.ScrollAwareFABBehavior"
         app:rippleColor="?attr/colorBackgroundFloating"/>
 </android.support.design.widget.CoordinatorLayout>

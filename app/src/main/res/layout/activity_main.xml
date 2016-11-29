@@ -10,22 +10,13 @@
     android:paddingRight="8dp"
     tools:context="by.thedrop.newmath.Activities.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_recyclerView"
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_activity_fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_margin="0dp"
+        android:layout_height="match_parent">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/vklogo"
-        app:backgroundTint="@color/colorPrimary"
-        app:fabSize="normal"
-        app:layout_behavior="by.thedrop.newmath.Templates.ScrollAwareFABBehavior"
-        app:rippleColor="?attr/colorBackgroundFloating"/>
+    </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>

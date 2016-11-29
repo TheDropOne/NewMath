@@ -37,21 +37,21 @@ public class Constants {
     public static HashMap<Integer, BasicChapter> chaptersMap = new HashMap<>();
 
     public static void initializeChapters() {
-        MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.signingcontract);
-        MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.premiumbadge);
-        MainActivityTemplate answersEgeCT = new MainActivityTemplate(R.string.answersEgeCT, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate typicalProblems = new MainActivityTemplate(R.string.typicalProblems, R.drawable.brackets);
-        MainActivityTemplate perimeter = new MainActivityTemplate(R.string.perimeter, R.drawable.pencil);
-        MainActivityTemplate areaPlaneFigures = new MainActivityTemplate(R.string.areaPlaneFigures, R.drawable.prev_atomickernelphysics);
-        MainActivityTemplate areaOfSurface = new MainActivityTemplate(R.string.areaOfSurface, R.drawable.cube);
-        MainActivityTemplate volume = new MainActivityTemplate(R.string.volume, R.drawable.cone);
-        MainActivityTemplate triangle = new MainActivityTemplate(R.string.triangle, R.drawable.pyramid);
-        MainActivityTemplate radiusInscribedCircle = new MainActivityTemplate(R.string.radiusInscribedCircle, R.drawable.panel);
-        MainActivityTemplate radiusCircumscribedCircle = new MainActivityTemplate(R.string.radiusCircumscribedCircle, R.drawable.panel);
-        MainActivityTemplate trigonometry = new MainActivityTemplate(R.string.trigonometry, R.drawable.protractor);
-        MainActivityTemplate algebra = new MainActivityTemplate(R.string.algebra, R.drawable.compass);
-        MainActivityTemplate integrals = new MainActivityTemplate(R.string.integrals, R.drawable.function);
-        MainActivityTemplate usefulResources = new MainActivityTemplate(R.string.usefulResources, R.drawable.notebook);
+        MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.icon_award);
+        MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.icon_scientist);
+        MainActivityTemplate answersEgeCT = new MainActivityTemplate(R.string.answersEgeCT, R.drawable.icon_computer);
+        MainActivityTemplate typicalProblems = new MainActivityTemplate(R.string.typicalProblems, R.drawable.icon_disk);
+        MainActivityTemplate perimeter = new MainActivityTemplate(R.string.perimeter, R.drawable.icon_pencil);
+        MainActivityTemplate areaPlaneFigures = new MainActivityTemplate(R.string.areaPlaneFigures, R.drawable.icon_calculator);
+        MainActivityTemplate areaOfSurface = new MainActivityTemplate(R.string.areaOfSurface, R.drawable.icon_cases);
+        MainActivityTemplate volume = new MainActivityTemplate(R.string.volume, R.drawable.icon_diagramm);
+        MainActivityTemplate triangle = new MainActivityTemplate(R.string.triangle, R.drawable.icon_triangle);
+        MainActivityTemplate radiusInscribedCircle = new MainActivityTemplate(R.string.radiusInscribedCircle, R.drawable.icon_summ);
+        MainActivityTemplate radiusCircumscribedCircle = new MainActivityTemplate(R.string.radiusCircumscribedCircle, R.drawable.icon_pi);
+        MainActivityTemplate trigonometry = new MainActivityTemplate(R.string.trigonometry, R.drawable.icon_protractor);
+        MainActivityTemplate algebra = new MainActivityTemplate(R.string.algebra, R.drawable.icon_sqrt);
+        MainActivityTemplate integrals = new MainActivityTemplate(R.string.integrals, R.drawable.icon_graph);
+        MainActivityTemplate usefulResources = new MainActivityTemplate(R.string.usefulResources, R.drawable.icon_notepad);
 
         chapters.add(helpAuthor);
         chapters.add(advices);

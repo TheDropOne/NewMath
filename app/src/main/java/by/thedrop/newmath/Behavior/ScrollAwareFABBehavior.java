@@ -1,4 +1,4 @@
-package by.thedrop.newmath.Templates;
+package by.thedrop.newmath.Behavior;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
