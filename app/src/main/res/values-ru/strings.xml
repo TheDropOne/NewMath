@@ -166,6 +166,12 @@
     <string name="share_text">Готовься к экзаменам по математике с приложением \"Все формулы. Математика\". Ответы и решения ЦТ и ЕГЭ, формулы, задачи и много всего еще!  play.google.com/store/apps/details?id=by.thedrop.math</string>
     <string name="share_using">Поделиться с помощью :</string>
     <string name="radiusCircumscribedCircle_isosceles_trapeze">Равнобедренная трапеция</string>
+    <string name="usefulResources_answers_ege">Ответы на ЕГЭ и ОГЭ</string>
+    <string name="usefulResources_information_belarusian_universities">Вся информация о ВУЗах</string>
+    <string name="usefulResources_rt_solutions">Решения РТ</string>
+    <string name="usefulResources_skanavi_book">Сборник задач Сканави</string>
+    <string name="usefulResources_veremenuk_book">Сборник задач Веременюк</string>
+    <string name="chapter_in_development">Раздел в доработке\n\t\t\tчекни позже!</string>
 
 
 </resources>

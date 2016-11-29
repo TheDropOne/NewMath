@@ -6,7 +6,6 @@ import java.util.List;
 
 import by.thedrop.newmath.Chapters.Advices;
 import by.thedrop.newmath.Chapters.Algebra;
-import by.thedrop.newmath.Chapters.AnswersEgeCT;
 import by.thedrop.newmath.Chapters.AreaOfSurface;
 import by.thedrop.newmath.Chapters.AreaPlaneFigures;
 import by.thedrop.newmath.Chapters.HelpAuthor;
@@ -17,6 +16,7 @@ import by.thedrop.newmath.Chapters.RadiusInscribedCircle;
 import by.thedrop.newmath.Chapters.Triangle;
 import by.thedrop.newmath.Chapters.Trigonometry;
 import by.thedrop.newmath.Chapters.TypicalProblems;
+import by.thedrop.newmath.Chapters.UsefulResources;
 import by.thedrop.newmath.Chapters.Volume;
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.Templates.BasicChapter;
@@ -33,13 +33,14 @@ public class Constants {
 
     public static final String CHAPTER_INTENT_FLAG = "CHAPTER";
 
+    public static ArrayList<MainActivityTemplate> preferences = new ArrayList<>();
     public static ArrayList<MainActivityTemplate> chapters = new ArrayList<>();
     public static HashMap<Integer, BasicChapter> chaptersMap = new HashMap<>();
 
     public static void initializeChapters() {
         MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.icon_award);
         MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.icon_scientist);
-        MainActivityTemplate answersEgeCT = new MainActivityTemplate(R.string.answersEgeCT, R.drawable.icon_computer);
+        //MainActivityTemplate answersEgeCT = new MainActivityTemplate(R.string.answersEgeCT, R.drawable.icon_computer);
         MainActivityTemplate typicalProblems = new MainActivityTemplate(R.string.typicalProblems, R.drawable.icon_disk);
         MainActivityTemplate perimeter = new MainActivityTemplate(R.string.perimeter, R.drawable.icon_pencil);
         MainActivityTemplate areaPlaneFigures = new MainActivityTemplate(R.string.areaPlaneFigures, R.drawable.icon_calculator);
@@ -55,7 +56,7 @@ public class Constants {
 
         chapters.add(helpAuthor);
         chapters.add(advices);
-        chapters.add(answersEgeCT);
+        //chapters.add(answersEgeCT);
         chapters.add(typicalProblems);
         chapters.add(perimeter);
         chapters.add(areaPlaneFigures);
@@ -85,31 +86,13 @@ public class Constants {
     public static List<SublistTemplate> mTrigonometry = new ArrayList<>();
     public static List<SublistTemplate> mAlgebra = new ArrayList<>();
     public static List<SublistTemplate> mIntegrals = new ArrayList<>();
-
-    /*
-    public static List<SublistTemplate> mHelpAuthorResources = new ArrayList<>();
-    public static List<SublistTemplate> mAdvicesResources = new ArrayList<>();
-    public static List<SublistTemplate> mAnswersEgeCTResources = new ArrayList<>();
-    public static List<SublistTemplate> mTypicalProblemsResources = new ArrayList<>();
-    public static List<SublistTemplate> mPerimeterResources = new ArrayList<>();
-    public static List<SublistTemplate> mAreaPlaneFiguresResources = new ArrayList<>();
-    public static List<SublistTemplate> mAreaOfSurfaceResources = new ArrayList<>();
-    public static List<SublistTemplate> mVolumeResources = new ArrayList<>();
-    public static List<SublistTemplate> mTriangleResources = new ArrayList<>();
-    public static List<SublistTemplate> mRadiusInscribedCircleResources = new ArrayList<>();
-    public static List<SublistTemplate> mRadiusCircumscribedCircleResources = new ArrayList<>();
-    public static List<SublistTemplate> mTrigonometryResources = new ArrayList<>();
-    public static List<SublistTemplate> mAlgebraResources = new ArrayList<>();
-    public static List<SublistTemplate> mIntegralsResources = new ArrayList<>();
-    */
-
-    //public static ArrayList<SublistTemplate> mUsefulResourcesResources = new ArrayList<>();
+    public static List<SublistTemplate> mUsefulResourcesResources = new ArrayList<>();
 
     public static void initializeSubChapters() {
         //REWRITE WITH RESOURCES
         mHelpAuthor = asList(help_author_watch_ad, help_author_left_feedback, help_author_join_group, help_author_tell_friends);
         mAdvices = asList(advices_guess_answer, advices_week_until_exam, advices_better_way_to_prepare, advices_prepare_on_100, advices_time_using, advices_day_before, advices_in_test, advices_answers_from_teacher, advices_how_to_learn_trigonometry, advices_the_best_way_to_prerare, advices_not_miss_the_answer, advices_you_will_pass);
-        mAnswersEgeCT = asList(answersEgeCT_ege2015demo, answersEgeCT_gia2015, answersEgeCT_rt20162, answersEgeCT_rt20163, answersEgeCT_ct2011, answersEgeCT_ct2012, answersEgeCT_ct2013, answersEgeCT_ct2014, answersEgeCT_ct2015);
+        //mAnswersEgeCT = asList(answersEgeCT_ege2015demo, answersEgeCT_gia2015, answersEgeCT_rt20162, answersEgeCT_rt20163, answersEgeCT_ct2011, answersEgeCT_ct2012, answersEgeCT_ct2013, answersEgeCT_ct2014, answersEgeCT_ct2015);
         mTypicalProblems = asList(typicalProblems_planimetry, typicalProblems_stereometry, typicalProblems_trig_equations, typicalProblems_equations_in_problems, typicalProblems_answers);
         mPerimeter = asList(perimeter_triangle, perimeter_square, perimeter_rectangle, perimeter_parallelogram, perimeter_rhombus, perimeter_circumference, perimeter_trapeze, perimeter_arc_length);
         mAreaPlaneFigures = asList(areaPlaneFigures_square, areaPlaneFigures_circle, areaPlaneFigures_rectangle, areaPlaneFigures_right_triangle, areaPlaneFigures_isosceles_triangle, areaPlaneFigures_equilateral_triangle, areaPlaneFigures_triangle, areaPlaneFigures_triangle_2sides_angle, areaPlaneFigures_triangle_side_2angle, areaPlaneFigures_geron_formula, areaPlaneFigures_rhombus, areaPlaneFigures_parallelogram, areaPlaneFigures_trapeze, areaPlaneFigures_regular_polygon, areaPlaneFigures_ring, areaPlaneFigures_ellipce, areaPlaneFigures_ring_sector, areaPlaneFigures_circle_sector);
@@ -121,12 +104,13 @@ public class Constants {
         mTrigonometry = asList(trigonometry_values_common_angles, trigonometry_summ_trigonom_functions, trigonometry_difference_trigonom_functions, trigonometry_multiplication_trigonom_functions, trigonometry_formulas_summ_angles, trigonometry_formulas_diff_angles, trigonometry_formulas_half_angle, trigonometry_formulas_triple_angle, trigonometry_reduction_formulas, trigonometry_squared_function, trigonometry_cubed_function);
         mAlgebra = asList(algebra_viett_teorem, algebra_arithmetic_progression, algebra_geometric_progression, algebra_tangent_equation, algebra_logarithm_properties, algebra_parabola_vertex_coordinates);
         mIntegrals = asList(integrals_derivative, integrals_primitive, integrals_integrals, integrals_equivalence, integrals_indefinite_integral);
+        mUsefulResourcesResources = asList(usefulResources_answers_ege,usefulResources_information_belarusian_universities,usefulResources_skanavi_book,usefulResources_veremenuk_book,usefulResources_rt_solutions);
 
 
 
         chaptersMap.put(R.string.help_author, new HelpAuthor());
         chaptersMap.put(R.string.advices, new Advices());
-        chaptersMap.put(R.string.answersEgeCT, new AnswersEgeCT());
+        //chaptersMap.put(R.string.answersEgeCT, new AnswersEgeCT());
         chaptersMap.put(R.string.typicalProblems, new TypicalProblems());
         chaptersMap.put(R.string.perimeter, new Perimeter());
         chaptersMap.put(R.string.areaPlaneFigures, new AreaPlaneFigures());
@@ -138,7 +122,7 @@ public class Constants {
         chaptersMap.put(R.string.trigonometry, new Trigonometry());
         chaptersMap.put(R.string.algebra, new Algebra());
         chaptersMap.put(R.string.integrals, new Integrals());
-        //chaptersMap.put(R.string.usefulResources, new UsefulResources());
+        chaptersMap.put(R.string.usefulResources, new UsefulResources());
     }
 
     private static List<SublistTemplate> asList(String... strings) {

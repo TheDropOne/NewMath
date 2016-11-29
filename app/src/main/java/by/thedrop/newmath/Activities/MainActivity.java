@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import by.thedrop.newmath.Chapters.HelpAuthor;
 import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.Fragments.MainRecyclerViewFragment;
+import by.thedrop.newmath.Fragments.PreferencesFragment;
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.Templates.BasicChapter;
 
@@ -18,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static BasicChapter template;
 
-    FragmentManager mFragmentManager;
-    Fragment recyclerViewFragment;
+    public static FragmentManager mFragmentManager;
+    private static Fragment recyclerViewFragment;
+    private static Fragment preferencesFragment;
 
 
     @Override
@@ -34,8 +36,25 @@ public class MainActivity extends AppCompatActivity {
 
         mFragmentManager = getSupportFragmentManager();
         recyclerViewFragment = mFragmentManager.findFragmentById(R.id.main_activity_fragment_container);
+        (new InitializePreferences()).execute();
         (new InitializeFragments()).execute();
         (new InitializeConstants()).execute();
+    }
+
+    public static void updatePreferences() {
+        mFragmentManager.beginTransaction().replace(R.id.main_activity_preferences_container, new PreferencesFragment()).commit();
+    }
+
+    class InitializePreferences extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            if (preferencesFragment == null) {
+                preferencesFragment = new PreferencesFragment();
+                mFragmentManager.beginTransaction().add(R.id.main_activity_preferences_container, preferencesFragment).commit();
+            }
+            return null;
+        }
     }
 
     class InitializeConstants extends AsyncTask<Void, Void, Void> {

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="by.thedrop.newmath">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -22,6 +22,8 @@
         <activity android:name=".Activities.TextActivity">
         </activity>
         <activity android:name=".Activities.ImageActivity">
+        </activity>
+        <activity android:name=".Activities.ChapterInDevelopmentActivity">
         </activity>
     </application>
 

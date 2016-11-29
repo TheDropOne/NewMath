@@ -41,11 +41,25 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         final MainActivityTemplate currentElement = chapters.get(position);
 
         TextView name = holder.mTextView;
-        ImageView image = holder.mImageView;
+        final ImageView image = holder.mImageView;
 
         name.setText(currentElement.getName());
         image.setImageResource(currentElement.getLocation());
 
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(Constants.preferences.contains(currentElement)){
+                    Constants.preferences.remove(currentElement);
+                }else{
+                    Constants.preferences.add(0, currentElement);
+                }
+                if (Constants.preferences.size() > 5) {
+                    Constants.preferences.remove(4);
+                }
+                MainActivity.updatePreferences();
+            }
+        });
         holder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

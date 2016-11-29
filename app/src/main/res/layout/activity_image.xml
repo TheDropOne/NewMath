@@ -9,7 +9,7 @@
     tools:context="by.thedrop.newmath.Activities.ImageActivity">
 
 
-    <ImageView
+    <by.thedrop.newmath.Views.TouchImageView
         android:id="@+id/image_activity_mainImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

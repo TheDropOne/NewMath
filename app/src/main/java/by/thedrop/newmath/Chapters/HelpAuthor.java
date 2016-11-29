@@ -17,6 +17,7 @@ public class HelpAuthor extends BasicChapter {
     public static String shareText;
     public HelpAuthor() {
         this.mElements = Constants.mHelpAuthor;
+        Intent watchAd;
         Intent joinGroup;
         Intent leftFeedback;
         Intent tellFriend;
@@ -31,10 +32,11 @@ public class HelpAuthor extends BasicChapter {
         tellFriend.setType("text/plain");
         tellFriend.putExtra(Intent.EXTRA_TEXT, shareText);
 
+        paragrahpIntent.append(R.string.help_author_watch_ad, new CustomIntention());
         paragrahpIntent.append(R.string.help_author_join_group, new CustomIntention(joinGroup));
         paragrahpIntent.append(R.string.help_author_left_feedback, new CustomIntention(leftFeedback));
         paragrahpIntent.append(R.string.help_author_tell_friends, new CustomIntention(tellFriend));
-        //paragrahpIntent.append(R.string.help_author_watch_ad, new CustomIntention());
+
     }
 
     //"Посмотреть рекламу", "Написать хороший отзыв:)","Вступить в нашу группу вк","Рассказать друзьям!");

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
+import by.thedrop.newmath.Activities.ChapterInDevelopmentActivity;
 import by.thedrop.newmath.Activities.ImageActivity;
 import by.thedrop.newmath.Activities.TextActivity;
 import by.thedrop.newmath.R;
@@ -30,6 +31,9 @@ public class CustomIntention {
         this.type = 3;
         mIntent = intent;
     }
+    public CustomIntention(){
+        this.type = 0;
+    }
 
     public CustomIntention(int type, int resource) {
         this.type = type;
@@ -44,12 +48,15 @@ public class CustomIntention {
                 toastResource = resource;
                 break;
             default:
-                imageResource = R.drawable.brackets;
+                imageResource = R.drawable.icon_award;
         }
     }
     public Intent returnIntent(Context context){
         Intent intent = null;
         switch (type) {
+            case 0:
+                intent = new Intent(context, ChapterInDevelopmentActivity.class);
+                break;
             case 1:
                 intent = new Intent(context,ImageActivity.class);
                 ImageActivity.imageResource = imageResource;
@@ -66,7 +73,7 @@ public class CustomIntention {
                 break;
             default:
                 intent = new Intent(context,ImageActivity.class);
-                ImageActivity.imageResource = R.drawable.brackets;
+                ImageActivity.imageResource = R.drawable.icon_award;
                 break;
         }
         return intent;

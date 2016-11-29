@@ -9,14 +9,14 @@ import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 
 import by.thedrop.newmath.R;
+import by.thedrop.newmath.Views.TouchImageView;
 
 public class ImageActivity extends AppCompatActivity {
 
     public static int imageResource;
-    private ImageView mImageView;
+    private TouchImageView mImageView;
     private FloatingActionButton mShareButton;
 
     @Override
@@ -24,7 +24,7 @@ public class ImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
 
-        mImageView = (ImageView) findViewById(R.id.image_activity_mainImage);
+        mImageView = (TouchImageView) findViewById(R.id.image_activity_mainImage);
         mShareButton = (FloatingActionButton) findViewById(R.id.fab_share);
         final Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), imageResource);
 
