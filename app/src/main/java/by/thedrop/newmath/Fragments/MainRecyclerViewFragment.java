@@ -79,6 +79,7 @@ public class MainRecyclerViewFragment extends Fragment {
                 mRecyclerView.setAdapter(adapter);
                 mRecyclerView.setHasFixedSize(true);
                 mRecyclerView.setLayoutManager(layoutManager);
+                //mRecyclerView.setItemAnimator();
             } catch (Exception ex) {
                 ex.printStackTrace();
                 Toast.makeText(getActivity().getApplicationContext(), R.string.error_message, Toast.LENGTH_SHORT).show();

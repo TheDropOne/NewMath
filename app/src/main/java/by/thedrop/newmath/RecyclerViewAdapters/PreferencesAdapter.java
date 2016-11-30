@@ -41,7 +41,7 @@ public class PreferencesAdapter extends RecyclerView.Adapter<PreferencesAdapter.
 
         ImageView image = holder.mImageView;
 
-        image.setImageResource(currentElement.getLocation());
+        image.setImageResource(currentElement.getLocationSelected());
 
         holder.setOnClickListener(new View.OnClickListener() {
             @Override

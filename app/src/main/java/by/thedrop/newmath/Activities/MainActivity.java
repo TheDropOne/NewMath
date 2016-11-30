@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import by.thedrop.newmath.Chapters.HelpAuthor;
 import by.thedrop.newmath.Constants.Constants;
@@ -19,9 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
     public static BasicChapter template;
 
+    public static boolean pendingIntroAnimation;
+
     public static FragmentManager mFragmentManager;
     private static Fragment recyclerViewFragment;
     private static Fragment preferencesFragment;
+    public static Animation disappearAnimation;
 
 
     @Override
@@ -29,7 +34,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        disappearAnimation = AnimationUtils.loadAnimation(this,R.anim.image_disappearing);
+
+        disappearAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
         HelpAuthor.shareText = getString(R.string.share_text);
+        if (savedInstanceState == null) pendingIntroAnimation = true;
+        else
         package_name = getPackageName();
         template = new BasicChapter();
 

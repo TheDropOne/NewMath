@@ -38,21 +38,21 @@ public class Constants {
     public static HashMap<Integer, BasicChapter> chaptersMap = new HashMap<>();
 
     public static void initializeChapters() {
-        MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.icon_award);
-        MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.icon_scientist);
+        MainActivityTemplate helpAuthor = new MainActivityTemplate(R.string.help_author, R.drawable.icon_award,R.drawable.icon_award_filled);
+        MainActivityTemplate advices = new MainActivityTemplate(R.string.advices, R.drawable.icon_scientist,R.drawable.icon_scientist_filled);
         //MainActivityTemplate answersEgeCT = new MainActivityTemplate(R.string.answersEgeCT, R.drawable.icon_computer);
-        MainActivityTemplate typicalProblems = new MainActivityTemplate(R.string.typicalProblems, R.drawable.icon_disk);
-        MainActivityTemplate perimeter = new MainActivityTemplate(R.string.perimeter, R.drawable.icon_pencil);
-        MainActivityTemplate areaPlaneFigures = new MainActivityTemplate(R.string.areaPlaneFigures, R.drawable.icon_calculator);
-        MainActivityTemplate areaOfSurface = new MainActivityTemplate(R.string.areaOfSurface, R.drawable.icon_cases);
-        MainActivityTemplate volume = new MainActivityTemplate(R.string.volume, R.drawable.icon_diagramm);
-        MainActivityTemplate triangle = new MainActivityTemplate(R.string.triangle, R.drawable.icon_triangle);
-        MainActivityTemplate radiusInscribedCircle = new MainActivityTemplate(R.string.radiusInscribedCircle, R.drawable.icon_summ);
-        MainActivityTemplate radiusCircumscribedCircle = new MainActivityTemplate(R.string.radiusCircumscribedCircle, R.drawable.icon_pi);
-        MainActivityTemplate trigonometry = new MainActivityTemplate(R.string.trigonometry, R.drawable.icon_protractor);
-        MainActivityTemplate algebra = new MainActivityTemplate(R.string.algebra, R.drawable.icon_sqrt);
-        MainActivityTemplate integrals = new MainActivityTemplate(R.string.integrals, R.drawable.icon_graph);
-        MainActivityTemplate usefulResources = new MainActivityTemplate(R.string.usefulResources, R.drawable.icon_notepad);
+        MainActivityTemplate typicalProblems = new MainActivityTemplate(R.string.typicalProblems, R.drawable.icon_disk,R.drawable.icon_disk_filled);
+        MainActivityTemplate perimeter = new MainActivityTemplate(R.string.perimeter, R.drawable.icon_pencil,R.drawable.icon_pencil_filled);
+        MainActivityTemplate areaPlaneFigures = new MainActivityTemplate(R.string.areaPlaneFigures, R.drawable.icon_calculator,R.drawable.icon_calculator_filled);
+        MainActivityTemplate areaOfSurface = new MainActivityTemplate(R.string.areaOfSurface, R.drawable.icon_cases,R.drawable.icon_cases_filled);
+        MainActivityTemplate volume = new MainActivityTemplate(R.string.volume, R.drawable.icon_diagramm,R.drawable.icon_diagramm_filled);
+        MainActivityTemplate triangle = new MainActivityTemplate(R.string.triangle, R.drawable.icon_triangle,R.drawable.icon_triangle_filled);
+        MainActivityTemplate radiusInscribedCircle = new MainActivityTemplate(R.string.radiusInscribedCircle, R.drawable.icon_summ,R.drawable.icon_summ_filled);
+        MainActivityTemplate radiusCircumscribedCircle = new MainActivityTemplate(R.string.radiusCircumscribedCircle, R.drawable.icon_pi,R.drawable.icon_pi_filled);
+        MainActivityTemplate trigonometry = new MainActivityTemplate(R.string.trigonometry, R.drawable.icon_protractor,R.drawable.icon_protractor_filled);
+        MainActivityTemplate algebra = new MainActivityTemplate(R.string.algebra, R.drawable.icon_sqrt,R.drawable.icon_sqrt_filled);
+        MainActivityTemplate integrals = new MainActivityTemplate(R.string.integrals, R.drawable.icon_graph,R.drawable.icon_graph_filled);
+        MainActivityTemplate usefulResources = new MainActivityTemplate(R.string.usefulResources, R.drawable.icon_notepad,R.drawable.icon_notepad_filled);
 
         chapters.add(helpAuthor);
         chapters.add(advices);

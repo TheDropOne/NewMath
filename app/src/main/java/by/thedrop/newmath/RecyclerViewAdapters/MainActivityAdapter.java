@@ -1,10 +1,13 @@
 package by.thedrop.newmath.RecyclerViewAdapters;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +27,8 @@ import by.thedrop.newmath.Templates.MainActivityTemplate;
 public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapter.MyViewHolder> {
 
     private List<MainActivityTemplate> chapters;
+    private static Context mContext;
+    public static final String ACTION_IMAGE_PREFERENCES_CLICKED = "action_image_preferences_clicked";
 
     public MainActivityAdapter(List<MainActivityTemplate> chapters) {
         this.chapters = chapters;
@@ -37,7 +42,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         final MainActivityTemplate currentElement = chapters.get(position);
 
         TextView name = holder.mTextView;
@@ -45,6 +50,33 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
 
         name.setText(currentElement.getName());
         image.setImageResource(currentElement.getLocation());
+
+        final Animation shakeAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(),R.anim.shake);
+        final Animation disappearingAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(),R.anim.image_disappearing);
+        final Animation appearingAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(),R.anim.image_appearing);
+
+
+        disappearingAnimation.setAnimationListener(new Animation.AnimationListener() {
+            int newLocation;
+
+            @Override
+            public void onAnimationStart(Animation animation) {
+                if(currentElement.isSelected()) newLocation = currentElement.getLocation();
+                else newLocation = currentElement.getLocationSelected();
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                image.setImageResource(newLocation);
+                currentElement.setSelected(!currentElement.isSelected());
+                image.startAnimation(appearingAnimation);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
 
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +89,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
                 if (Constants.preferences.size() > Constants.MAX_PREFERENCES_LIST_SIZE) {
                     Constants.preferences.remove(Constants.MAX_PREFERENCES_LIST_SIZE);
                 }
+                image.startAnimation(shakeAnimation);
                 MainActivity.updatePreferences();
             }
         });
@@ -83,7 +116,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mTextView;
-        private ImageView mImageView;
+        public ImageView mImageView;
         private View itemView;
 
         public MyViewHolder(View itemView) {

@@ -7,10 +7,30 @@ package by.thedrop.newmath.Templates;
 public class MainActivityTemplate {
     private int name;
     private int location;
+    private int locationSelected;
+    private boolean selected;
 
-    public MainActivityTemplate(int name, int location) {
-        this.name = name;
+    public MainActivityTemplate(int name, int location, int locationSelected) {
         this.location = location;
+        this.locationSelected = locationSelected;
+        this.name = name;
+        this.selected = false;
+    }
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+
+    public int getLocationSelected() {
+        return locationSelected;
+    }
+
+    public void setLocationSelected(int locationSelected) {
+        this.locationSelected = locationSelected;
     }
 
     public int getName() {
