@@ -49,11 +49,12 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         final ImageView image = holder.mImageView;
 
         name.setText(currentElement.getName());
-        image.setImageResource(currentElement.getLocation());
+        if(currentElement.isSelected()) image.setImageResource(currentElement.getLocationSelected());
+        else image.setImageResource(currentElement.getLocation());
 
-        final Animation shakeAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(),R.anim.shake);
-        final Animation disappearingAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(),R.anim.image_disappearing);
-        final Animation appearingAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(),R.anim.image_appearing);
+        final Animation shakeAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.shake);
+        final Animation disappearingAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.image_disappearing);
+        final Animation appearingAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.image_appearing);
 
 
         disappearingAnimation.setAnimationListener(new Animation.AnimationListener() {
@@ -61,7 +62,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
 
             @Override
             public void onAnimationStart(Animation animation) {
-                if(currentElement.isSelected()) newLocation = currentElement.getLocation();
+                if (currentElement.isSelected()) newLocation = currentElement.getLocation();
                 else newLocation = currentElement.getLocationSelected();
             }
 
@@ -81,16 +82,18 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Constants.preferences.contains(currentElement)){
-                    Constants.preferences.remove(currentElement);
-                }else{
-                    Constants.preferences.add(0, currentElement);
+                if (Constants.preferences.size() > Constants.MAX_PREFERENCES_LIST_SIZE - 1 && !currentElement.isSelected()) {
+                    //Constants.preferences.remove(Constants.MAX_PREFERENCES_LIST_SIZE);
+                    image.startAnimation(shakeAnimation);
+                } else {
+                    if (Constants.preferences.contains(currentElement)) {
+                        Constants.preferences.remove(currentElement);
+                    } else {
+                        Constants.preferences.add(0, currentElement);
+                    }
+                    image.startAnimation(disappearingAnimation);
+                    MainActivity.updatePreferences();
                 }
-                if (Constants.preferences.size() > Constants.MAX_PREFERENCES_LIST_SIZE) {
-                    Constants.preferences.remove(Constants.MAX_PREFERENCES_LIST_SIZE);
-                }
-                image.startAnimation(shakeAnimation);
-                MainActivity.updatePreferences();
             }
         });
         holder.setOnClickListener(new View.OnClickListener() {
