@@ -32,7 +32,7 @@ import static by.thedrop.newmath.R.string.*;
 public class Constants {
 
     public static final String CHAPTER_INTENT_FLAG = "CHAPTER";
-
+    public static final int MAX_PREFERENCES_LIST_SIZE = 5;
     public static ArrayList<MainActivityTemplate> preferences = new ArrayList<>();
     public static ArrayList<MainActivityTemplate> chapters = new ArrayList<>();
     public static HashMap<Integer, BasicChapter> chaptersMap = new HashMap<>();

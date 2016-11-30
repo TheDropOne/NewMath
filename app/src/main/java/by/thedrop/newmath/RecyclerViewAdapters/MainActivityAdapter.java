@@ -54,8 +54,8 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
                 }else{
                     Constants.preferences.add(0, currentElement);
                 }
-                if (Constants.preferences.size() > 5) {
-                    Constants.preferences.remove(4);
+                if (Constants.preferences.size() > Constants.MAX_PREFERENCES_LIST_SIZE) {
+                    Constants.preferences.remove(Constants.MAX_PREFERENCES_LIST_SIZE);
                 }
                 MainActivity.updatePreferences();
             }
