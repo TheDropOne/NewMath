@@ -35,6 +35,16 @@ public class PreferencesAdapter extends RecyclerView.Adapter<PreferencesAdapter.
         return new PreferencesAdapter.MyViewHolder(view);
     }
 
+    public void add(MainActivityTemplate template, int position) {
+        preferences.add(position, template);
+        notifyItemInserted(position);
+    }
+
+    public void remove(int position) {
+        preferences.remove(position);
+        notifyItemRemoved(position);
+    }
+
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         final MainActivityTemplate currentElement = preferences.get(position);

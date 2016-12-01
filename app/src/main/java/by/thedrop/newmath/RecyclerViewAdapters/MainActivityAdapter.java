@@ -17,6 +17,7 @@ import by.thedrop.newmath.Activities.MainActivity;
 import by.thedrop.newmath.Activities.SublistActivity;
 import by.thedrop.newmath.Chapters.HelpAuthor;
 import by.thedrop.newmath.Constants.Constants;
+import by.thedrop.newmath.Fragments.PreferencesFragment;
 import by.thedrop.newmath.R;
 import by.thedrop.newmath.Templates.MainActivityTemplate;
 
@@ -49,7 +50,8 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         final ImageView image = holder.mImageView;
 
         name.setText(currentElement.getName());
-        if(currentElement.isSelected()) image.setImageResource(currentElement.getLocationSelected());
+        if (currentElement.isSelected())
+            image.setImageResource(currentElement.getLocationSelected());
         else image.setImageResource(currentElement.getLocation());
 
         final Animation shakeAnimation = AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.shake);
@@ -83,13 +85,14 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
             @Override
             public void onClick(View view) {
                 if (Constants.preferences.size() > Constants.MAX_PREFERENCES_LIST_SIZE - 1 && !currentElement.isSelected()) {
-                    //Constants.preferences.remove(Constants.MAX_PREFERENCES_LIST_SIZE);
                     image.startAnimation(shakeAnimation);
                 } else {
-                    if (Constants.preferences.contains(currentElement)) {
-                        Constants.preferences.remove(currentElement);
+
+                    int index = Constants.preferences.indexOf(currentElement);
+                    if (index != -1) {
+                        PreferencesFragment.adapter.remove(index);
                     } else {
-                        Constants.preferences.add(0, currentElement);
+                        PreferencesFragment.adapter.add(currentElement, 0);
                     }
                     image.startAnimation(disappearingAnimation);
                     MainActivity.updatePreferences();

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        disappearAnimation = AnimationUtils.loadAnimation(this,R.anim.image_disappearing);
+        disappearAnimation = AnimationUtils.loadAnimation(this, R.anim.image_disappearing);
 
         disappearAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -53,21 +53,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         HelpAuthor.shareText = getString(R.string.share_text);
-        if (savedInstanceState == null) pendingIntroAnimation = true;
-        else
-        package_name = getPackageName();
+
+        if (savedInstanceState == null) {
+            pendingIntroAnimation = true;
+        } else {
+            package_name = getPackageName();
+        }
         template = new BasicChapter();
 
 
         mFragmentManager = getSupportFragmentManager();
         recyclerViewFragment = mFragmentManager.findFragmentById(R.id.main_activity_fragment_container);
-        (new InitializePreferences()).execute();
+        preferencesFragment = mFragmentManager.findFragmentById(R.id.main_activity_preferences_container);
+
         (new InitializeFragments()).execute();
+        (new InitializePreferences()).execute();
         (new InitializeConstants()).execute();
     }
 
     public static void updatePreferences() {
-        mFragmentManager.beginTransaction().replace(R.id.main_activity_preferences_container, new PreferencesFragment()).commit();
+        if (Constants.preferences.size() == 0) {
+            mFragmentManager.beginTransaction().
+                    hide(preferencesFragment).
+                    commit();
+        } else {
+            preferencesFragment = new PreferencesFragment();
+            mFragmentManager.beginTransaction().replace(R.id.main_activity_preferences_container, preferencesFragment).commit();
+        }
+
     }
 
     class InitializePreferences extends AsyncTask<Void, Void, Void> {
@@ -79,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
                 mFragmentManager.beginTransaction().add(R.id.main_activity_preferences_container, preferencesFragment).commit();
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            updatePreferences();
         }
     }
 

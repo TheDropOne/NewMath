@@ -25,6 +25,7 @@ import by.thedrop.newmath.Templates.MainActivityTemplate;
 public class PreferencesFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
+    public static PreferencesAdapter adapter;
     private ArrayList<MainActivityTemplate> preferences;
 
     @Override
@@ -43,10 +44,10 @@ public class PreferencesFragment extends Fragment {
         return v;
     }
 
-    class LoadPreferencesRecyclerViewFragment extends AsyncTask<Void, Void, Void> {
+    public class LoadPreferencesRecyclerViewFragment extends AsyncTask<Void, Void, Void> {
 
-        PreferencesAdapter adapter;
-        LinearLayoutManager layoutManager;
+
+        public LinearLayoutManager layoutManager;
 
         @Override
         protected Void doInBackground(Void... voids) {
@@ -63,6 +64,7 @@ public class PreferencesFragment extends Fragment {
                 mRecyclerView.setAdapter(adapter);
                 mRecyclerView.setHasFixedSize(true);
                 mRecyclerView.setLayoutManager(layoutManager);
+                //mRecyclerView.setItemAnimator(new SlideInUpAnimator(new OvershootInterpolator(1f)));
             }catch (Exception ex){
                 ex.printStackTrace();
                 Toast.makeText(getActivity().getApplicationContext(),R.string.error_message,Toast.LENGTH_SHORT).show();

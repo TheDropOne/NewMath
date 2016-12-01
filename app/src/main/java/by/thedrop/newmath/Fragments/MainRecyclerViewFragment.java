@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,10 @@ public class MainRecyclerViewFragment extends Fragment {
     public RecyclerView mRecyclerView;
     private FloatingActionButton fab;
     private ArrayList<MainActivityTemplate> chapters;
+    private LinearLayoutManager mLayoutManager;
+    private Parcelable mListState;
+    private static final String LIST_STATE_KEY = "list_state_key";
+    private Bundle mBundleRecyclerViewState;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,16 +64,34 @@ public class MainRecyclerViewFragment extends Fragment {
         (new LoadMainRecyclerViewFragment()).execute();
         return v;
     }
+/*
+    @Override
+    public void onPause() {
+        super.onPause();
+        // save RecyclerView state
+        mBundleRecyclerViewState = new Bundle();
+        Parcelable listState = mRecyclerView.getLayoutManager().onSaveInstanceState();
+        mBundleRecyclerViewState.putParcelable(LIST_STATE_KEY, listState);
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        // restore RecyclerView state
+        if (mBundleRecyclerViewState != null) {
+            Parcelable listState = mBundleRecyclerViewState.getParcelable(LIST_STATE_KEY);
+            mRecyclerView.getLayoutManager().onRestoreInstanceState(listState);
+        }
+    }
+*/
     class LoadMainRecyclerViewFragment extends AsyncTask<Void, Void, Void> {
         MainActivityAdapter adapter;
-        LinearLayoutManager layoutManager;
 
         @Override
         protected Void doInBackground(Void... voids) {
             adapter = new MainActivityAdapter(chapters);
-            layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+            mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+            mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
             return null;
         }
 
@@ -78,8 +101,8 @@ public class MainRecyclerViewFragment extends Fragment {
                 assert mRecyclerView != null;
                 mRecyclerView.setAdapter(adapter);
                 mRecyclerView.setHasFixedSize(true);
-                mRecyclerView.setLayoutManager(layoutManager);
-                //mRecyclerView.setItemAnimator();
+                mRecyclerView.setLayoutManager(mLayoutManager);
+                //mRecyclerView.setItemAnimator(new SlideInUpAnimator(new OvershootInterpolator(1f)));
             } catch (Exception ex) {
                 ex.printStackTrace();
                 Toast.makeText(getActivity().getApplicationContext(), R.string.error_message, Toast.LENGTH_SHORT).show();
