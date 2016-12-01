@@ -73,12 +73,16 @@ public class MainActivity extends AppCompatActivity {
 
     public static void updatePreferences() {
         if (Constants.preferences.size() == 0) {
-            mFragmentManager.beginTransaction().
-                    hide(preferencesFragment).
-                    commit();
+            mFragmentManager.beginTransaction()
+                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                    .hide(preferencesFragment)
+                    .commit();
         } else {
             preferencesFragment = new PreferencesFragment();
-            mFragmentManager.beginTransaction().replace(R.id.main_activity_preferences_container, preferencesFragment).commit();
+            mFragmentManager.beginTransaction()
+                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                    .replace(R.id.main_activity_preferences_container, preferencesFragment)
+                    .commit();
         }
 
     }
