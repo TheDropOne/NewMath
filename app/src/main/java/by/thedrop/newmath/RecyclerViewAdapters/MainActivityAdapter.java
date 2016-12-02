@@ -87,7 +87,6 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
                 if (Constants.preferences.size() > Constants.MAX_PREFERENCES_LIST_SIZE - 1 && !currentElement.isSelected()) {
                     image.startAnimation(shakeAnimation);
                 } else {
-
                     int index = Constants.preferences.indexOf(currentElement);
                     if (index != -1) {
                         PreferencesFragment.adapter.remove(index);

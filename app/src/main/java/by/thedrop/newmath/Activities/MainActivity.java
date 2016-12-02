@@ -18,6 +18,8 @@ import by.thedrop.newmath.Templates.BasicChapter;
 public class MainActivity extends AppCompatActivity {
 
     public static String package_name;
+    private static final String RECYCLER_VIEW_FRAGMENT = "RECYCLER_VIEW_FRAGMENT";
+    private static final String PREFERENCES_FRAGMENT = "PREFERENCES_FRAGMENT";
 
     public static BasicChapter template;
 
@@ -54,21 +56,32 @@ public class MainActivity extends AppCompatActivity {
         });
         HelpAuthor.shareText = getString(R.string.share_text);
 
+
+        mFragmentManager = getSupportFragmentManager();
+
         if (savedInstanceState == null) {
             pendingIntroAnimation = true;
+            recyclerViewFragment = mFragmentManager.findFragmentById(R.id.main_activity_fragment_container);
+            preferencesFragment = mFragmentManager.findFragmentById(R.id.main_activity_preferences_container);
         } else {
             package_name = getPackageName();
+            recyclerViewFragment = getSupportFragmentManager().getFragment(savedInstanceState, RECYCLER_VIEW_FRAGMENT);
+            preferencesFragment = getSupportFragmentManager().getFragment(savedInstanceState, PREFERENCES_FRAGMENT);
         }
         template = new BasicChapter();
 
 
-        mFragmentManager = getSupportFragmentManager();
-        recyclerViewFragment = mFragmentManager.findFragmentById(R.id.main_activity_fragment_container);
-        preferencesFragment = mFragmentManager.findFragmentById(R.id.main_activity_preferences_container);
-
         (new InitializeFragments()).execute();
         (new InitializePreferences()).execute();
         (new InitializeConstants()).execute();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        getSupportFragmentManager().putFragment(outState, RECYCLER_VIEW_FRAGMENT, recyclerViewFragment);
+        getSupportFragmentManager().putFragment(outState, PREFERENCES_FRAGMENT, preferencesFragment);
     }
 
     public static void updatePreferences() {
