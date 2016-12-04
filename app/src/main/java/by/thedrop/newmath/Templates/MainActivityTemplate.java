@@ -1,5 +1,7 @@
 package by.thedrop.newmath.Templates;
 
+import com.google.gson.Gson;
+
 /**
  * Created by Semen on 16-Nov-16.
  */
@@ -47,5 +49,14 @@ public class MainActivityTemplate {
 
     public void setLocation(int location) {
         this.location = location;
+    }
+
+    public String serialize(){
+        Gson gson = new Gson();
+        return gson.toJson(this);
+    }
+    public static MainActivityTemplate create(String serializedData){
+        Gson gson = new Gson();
+        return gson.fromJson(serializedData,MainActivityTemplate.class);
     }
 }

@@ -1,6 +1,5 @@
 package by.thedrop.newmath.RecyclerViewAdapters;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -28,7 +27,6 @@ import by.thedrop.newmath.Templates.MainActivityTemplate;
 public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapter.MyViewHolder> {
 
     private List<MainActivityTemplate> chapters;
-    private static Context mContext;
     public static final String ACTION_IMAGE_PREFERENCES_CLICKED = "action_image_preferences_clicked";
 
     public MainActivityAdapter(List<MainActivityTemplate> chapters) {
@@ -45,6 +43,12 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final MainActivityTemplate currentElement = chapters.get(position);
+        for (MainActivityTemplate t : Constants.preferences) {
+            if (t.equals(currentElement)) {
+                chapters.get(position).setSelected(true);
+                break;
+            }
+        }
 
         TextView name = holder.mTextView;
         final ImageView image = holder.mImageView;
