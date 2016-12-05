@@ -27,7 +27,7 @@
             android:paddingStart="14dp"
             android:text="Хитрости и советы"
             android:textColor="#000000"
-            android:textSize="24sp"/>
+            android:textSize="23sp"/>
 
         <ImageView
             android:id="@+id/item_main_image"

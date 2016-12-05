@@ -1,6 +1,7 @@
 package by.thedrop.newmath.RecyclerViewAdapters;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,7 @@ public class SublistActivityAdapter extends RecyclerView.Adapter<SublistActivity
 
         name.setText(template.getLocation());
 
+        final Bundle bundle = new Bundle();
 
         holder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,7 @@ public class SublistActivityAdapter extends RecyclerView.Adapter<SublistActivity
                 Intent intent = temp.getBehavior(view.getContext(), template.getLocation());
                 if (intent != null) {
                     view.getContext().startActivity(intent);
+                    MainActivity.mFirebaseAnalytics.logEvent("Image Activity created, image = "+ template.getName(), bundle);
                 }
             }
         });

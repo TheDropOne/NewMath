@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import by.thedrop.newmath.Chapters.HelpAuthor;
 import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.Fragments.MainRecyclerViewFragment;
@@ -41,13 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences mSharedPreferences;
     private int countSerializedObjects;
+    public static FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         disappearAnimation = AnimationUtils.loadAnimation(this, R.anim.image_disappearing);
 
         HelpAuthor.shareText = getString(R.string.share_text);
