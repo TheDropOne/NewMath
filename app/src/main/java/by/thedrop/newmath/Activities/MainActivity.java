@@ -92,9 +92,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        getSupportFragmentManager().putFragment(outState, RECYCLER_VIEW_FRAGMENT, recyclerViewFragment);
-        getSupportFragmentManager().putFragment(outState, PREFERENCES_FRAGMENT, preferencesFragment);
     }
 
     @Override
