@@ -7,8 +7,8 @@ android {
         applicationId "by.thedrop.newmath"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 2
-        versionName "0.98 Beta"
+        versionCode 3
+        versionName "1 Stable yopta"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
