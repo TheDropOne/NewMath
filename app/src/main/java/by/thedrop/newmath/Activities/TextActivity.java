@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.MobileAds;
+
+import by.thedrop.newmath.AdsAnalytics.Ads;
 import by.thedrop.newmath.R;
 
 public class TextActivity extends AppCompatActivity {
@@ -19,6 +22,9 @@ public class TextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text);
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-8634096223053663/8883193638");
+        Ads.showBanner(this, R.id.text_activity_adView,R.id.text_activity_coordinator_layout);
 
         mTextView = (TextView) findViewById(R.id.text_activity_text);
         mTextView.setText(textResource);

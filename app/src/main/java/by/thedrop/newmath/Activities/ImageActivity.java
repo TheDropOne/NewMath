@@ -27,11 +27,8 @@ public class ImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
 
-        MobileAds.initialize(getApplicationContext(), " ca-app-pub-8634096223053663/2286760030");
-        Ads.showBanner(this);
-        /*AdView mAdView = (AdView) findViewById(R.id.image_activity_adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);*/
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-8634096223053663/2286760030");
+        Ads.showBanner(this, R.id.image_activity_adView,R.id.activity_image_coordinator_layout);
 
         mImageView = (TouchImageView) findViewById(R.id.image_activity_mainImage);
         mShareButton = (FloatingActionButton) findViewById(R.id.fab_share);

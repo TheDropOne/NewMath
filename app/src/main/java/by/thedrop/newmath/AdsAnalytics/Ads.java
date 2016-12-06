@@ -7,16 +7,14 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import by.thedrop.newmath.R;
-
 /**
  * Created by Semen on 06-Dec-16.
  */
 
 public class Ads {
 
-    public static void showBanner(final Activity activity){
-        final AdView banner = (AdView) activity.findViewById(R.id.image_activity_adView);
+    public static void showBanner(final Activity activity, int bannerLocation, final int layout) {
+        final AdView banner = (AdView) activity.findViewById(bannerLocation);
         AdRequest adRequest = new AdRequest.Builder().build();
         banner.loadAd(adRequest);
 
@@ -24,14 +22,14 @@ public class Ads {
             @Override
             public void onAdLoaded() {
                 super.onAdLoaded();
-                setupContentViewPadding(activity,banner.getHeight());
+                setupContentViewPadding(activity, banner.getHeight(), layout);
             }
         });
     }
 
-    public static void setupContentViewPadding(Activity activity, int padding){
-        View view = activity.findViewById(R.id.activity_image_coordinator_layout);
-        view.setPadding(view.getPaddingLeft(),view.getPaddingTop(),view.getPaddingRight(),padding);
+    public static void setupContentViewPadding(Activity activity, int padding, int layout) {
+        View view = activity.findViewById(layout);
+        view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), padding);
     }
 
 }

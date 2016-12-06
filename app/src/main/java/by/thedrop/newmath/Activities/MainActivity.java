@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import by.thedrop.newmath.Chapters.HelpAuthor;
@@ -48,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        MobileAds.initialize(getApplicationContext(), " ca-app-pub-8634096223053663/2286760030");
 
         disappearAnimation = AnimationUtils.loadAnimation(this, R.anim.image_disappearing);
 
         HelpAuthor.shareText = getString(R.string.share_text);
 
         mSharedPreferences = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
-        //mSharedPreferences.edit().clear().apply();
         countSerializedObjects = mSharedPreferences.getInt(PREFERENCES_COUNT, 0);
 
         mFragmentManager = getSupportFragmentManager();
