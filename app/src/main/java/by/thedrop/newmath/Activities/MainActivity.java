@@ -25,17 +25,14 @@ import by.thedrop.newmath.Templates.MainActivityTemplate;
 public class MainActivity extends AppCompatActivity {
 
     public static String package_name;
+    public static boolean pendingIntroAnimation;
     private static final String RECYCLER_VIEW_FRAGMENT = "RECYCLER_VIEW_FRAGMENT";
     private static final String PREFERENCES_FRAGMENT = "PREFERENCES_FRAGMENT";
     public static final String APP_PREFERENCES = "MY_SETTINGS";
     private static final String PREFERENCES_COUNT = "PREFERENCES_COUNT";
     private static final String PREFERENCES_OBJECT = "PREFERENCES_OBJECT";
 
-
     public static BasicChapter template;
-
-    public static boolean pendingIntroAnimation;
-
     public static FragmentManager mFragmentManager;
     private static Fragment recyclerViewFragment;
     private static Fragment preferencesFragment;
@@ -51,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         disappearAnimation = AnimationUtils.loadAnimation(this, R.anim.image_disappearing);
 
         HelpAuthor.shareText = getString(R.string.share_text);
@@ -75,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         (new InitializeConstants()).execute();
         (new InitializePreferences()).execute();
         (new InitializeFragments()).execute();
+
     }
 
     public static void updatePreferences() {

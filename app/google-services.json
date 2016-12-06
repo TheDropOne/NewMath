@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "664857301986",
+    "firebase_url": "https://math-all-formulas.firebaseio.com",
+    "project_id": "math-all-formulas",
+    "storage_bucket": "math-all-formulas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664857301986:android:4a18636dd752c5e2",
+        "android_client_info": {
+          "package_name": "by.thedrop.newmath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664857301986-n7i9vaflmei2hm2fhpaiuv6jfqono9qt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "by.thedrop.newmath",
+            "certificate_hash": "5F0221D6E4EBF9E4E08A84E73CEE8F8071F3BCB3"
+          }
+        },
+        {
+          "client_id": "664857301986-7rajggqt6vqim9v697gdrgopivqob0j3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGAZfnyC7ktHmMkyyeaSQFBgT3V2J_DHg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664857301986-7rajggqt6vqim9v697gdrgopivqob0j3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
