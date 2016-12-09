@@ -12,9 +12,13 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.analytics.Tracker;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+import by.thedrop.newmath.AdsAnalytics.AnalyticsApplication;
 import by.thedrop.newmath.Chapters.HelpAuthor;
 import by.thedrop.newmath.Constants.Constants;
 import by.thedrop.newmath.Fragments.MainRecyclerViewFragment;
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static String package_name;
     public static boolean pendingIntroAnimation;
+    public static boolean isAdViewed = false;
+    public static int screensCount = 0;
     private static final String RECYCLER_VIEW_FRAGMENT = "RECYCLER_VIEW_FRAGMENT";
     private static final String PREFERENCES_FRAGMENT = "PREFERENCES_FRAGMENT";
     public static final String APP_PREFERENCES = "MY_SETTINGS";
@@ -39,9 +45,13 @@ public class MainActivity extends AppCompatActivity {
     private static Fragment preferencesFragment;
     public static Animation disappearAnimation;
 
+
     private SharedPreferences mSharedPreferences;
     private int countSerializedObjects;
     public static FirebaseAnalytics mFirebaseAnalytics;
+    public static InterstitialAd mInterstitialAd;
+
+    public static Tracker mTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +60,16 @@ public class MainActivity extends AppCompatActivity {
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         MobileAds.initialize(getApplicationContext(), " ca-app-pub-8634096223053663/2286760030");
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-8634096223053663/1561416438");
+        requestNewInterstitial();
 
         disappearAnimation = AnimationUtils.loadAnimation(this, R.anim.image_disappearing);
 
         HelpAuthor.shareText = getString(R.string.share_text);
+
+        AnalyticsApplication application = (AnalyticsApplication) getApplication();
+        mTracker = application.getDefaultTracker();
 
         mSharedPreferences = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         countSerializedObjects = mSharedPreferences.getInt(PREFERENCES_COUNT, 0);
@@ -75,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
         (new InitializePreferences()).execute();
         (new InitializeFragments()).execute();
 
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mInterstitialAd.loadAd(adRequest);
     }
 
     public static void updatePreferences() {

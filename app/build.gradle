@@ -7,8 +7,8 @@ android {
         applicationId "by.thedrop.newmath"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 3
-        versionName "1 Stable yopta"
+        versionCode 4
+        versionName "1.1 Analytics"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,10 +32,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'jp.wasabeef:recyclerview-animators:2.2.4'
     compile 'com.google.code.gson:gson:2.6.1'
+
     compile 'com.google.firebase:firebase-ads:10.0.1'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
     compile 'com.android.support:design:25.0.1'
     compile 'com.android.support:cardview-v7:25.0.1'
-    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.google.android.gms:play-services-analytics:10.0.1'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.HitBuilders;
+
 import java.util.List;
 
 import by.thedrop.newmath.Activities.MainActivity;
@@ -50,8 +52,15 @@ public class SublistActivityAdapter extends RecyclerView.Adapter<SublistActivity
                 BasicChapter temp = MainActivity.template;
                 Intent intent = temp.getBehavior(view.getContext(), template.getLocation());
                 if (intent != null) {
+                    MainActivity.screensCount++;
                     view.getContext().startActivity(intent);
-                    MainActivity.mFirebaseAnalytics.logEvent("Image Activity created, image = "+ template.getName(), bundle);
+                    MainActivity.mFirebaseAnalytics.logEvent("Image Activity created, image = " + template.getName(), bundle);
+                    MainActivity.mTracker
+                            .send(new HitBuilders.EventBuilder()
+                                    .setCategory("Image Activity")
+                                    .setAction("View")
+                                    .setLabel(template.getName())
+                                    .build());
                 }
             }
         });
